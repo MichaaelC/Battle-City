@@ -1,31 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerShoot : MonoBehaviour
 {
     public GameObject bulletPrefabs;
     public float bulletSpeed = 10f;
-    
 
     public void Shoot(Direction dir)
     {
-        var b = Instantiate(bulletPrefabs, transform.position, transform.rotation);
+        var bullet = Instantiate(bulletPrefabs, transform.position, transform.rotation);
+        
         switch (dir)
         {
             case Direction.up:
-                b.GetComponent<Rigidbody2D>().velocity = Vector2.up * 2f;
+                bullet.GetComponent<Rigidbody2D>().velocity = Vector2.up * bulletSpeed;
                 break;
             case Direction.down:
-                b.GetComponent<Rigidbody2D>().velocity = Vector2.down * 2f;
+                bullet.GetComponent<Rigidbody2D>().velocity = Vector2.down * bulletSpeed;
                 break;
             case Direction.left:
-                b.GetComponent<Rigidbody2D>().velocity = Vector2.left * 2f;
+                bullet.GetComponent<Rigidbody2D>().velocity = Vector2.left * bulletSpeed;
                 break;
             case Direction.right:
-                b.GetComponent<Rigidbody2D>().velocity = Vector2.right * 2f;
+                bullet.GetComponent<Rigidbody2D>().velocity = Vector2.right * bulletSpeed;
                 break;
         }
+
     }
 }
