@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerShoot ps;
     private Direction dir;
 
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -29,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
         Movement();
     }
 
+    
     private void FaceDirection()
     {
         if (direction.x == 1 && direction.y == 0)
@@ -39,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         else if (direction.x == -1 && direction.y == 0)
         {
             tf.eulerAngles = new Vector3(0f, 0f, 90f);
-            dir = Direction.left;
+            dir = Direction.left;   
         }
         else if (direction.x == 0 && direction.y == 1)
         {

@@ -4,7 +4,7 @@ public class PlayerShoot : MonoBehaviour
 {
     public GameObject bulletPrefabs;
     public float bulletSpeed = 10f;
-
+   
     public void Shoot(Direction dir)
     {
         var bullet = Instantiate(bulletPrefabs, transform.position, transform.rotation);
@@ -26,4 +26,6 @@ public class PlayerShoot : MonoBehaviour
         }
 
     }
+
+    
 }
