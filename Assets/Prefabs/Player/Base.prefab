@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7577868424177088284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02, y: -5.46, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -50,7 +50,6 @@ MonoBehaviour:
   maxHealth: 100
   health: 100
   gameUI: {fileID: 468336133729505534, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
-  playerMovement: {fileID: 5662884048135454372, guid: 5faef4c33d11db642928c908752c48c9, type: 3}
 --- !u!212 &6239058840741673496
 SpriteRenderer:
   m_ObjectHideFlags: 0
