@@ -15,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
     private PlayerShoot ps;
     private Direction dir;
 
+    public float currentSpeed;
+    public float increasedSpeed = 10f;
+    //private int currentFirePower;
 
     private void Awake()
     {
@@ -23,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         tf = GetComponent<Transform>();
         ps = GetComponent<PlayerShoot>();
         moveSpeedOriginal = moveSpeed;
+        currentSpeed = moveSpeed;
     }
     
     private void FixedUpdate()
@@ -30,6 +34,10 @@ public class PlayerMovement : MonoBehaviour
         Movement();
     }
 
+    public void IncreaseSpeed()
+    {
+        currentSpeed = increasedSpeed;
+    }
     
     private void FaceDirection()
     {
