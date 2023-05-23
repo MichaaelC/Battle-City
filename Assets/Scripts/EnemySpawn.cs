@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour
@@ -11,7 +9,6 @@ public class EnemySpawn : MonoBehaviour
     //public float spawnDelay = 5f;
     public Transform spawnPoint;
     [SerializeField]
-    
     private bool isStart = false;
     public float spawnTimer = 0f;
 
@@ -19,15 +16,15 @@ public class EnemySpawn : MonoBehaviour
     private bool isSpawning = false;
     public List<GameObject> spawnCount;
     private WaitForSeconds spawnDelay;
-    private Level spawnLevel;
+    private LevelManager spawnLevel;
     public List<AI> temp;
 
     private void Awake()
     {
         spawnDelay = new WaitForSeconds(spawnTimer);
-        spawnLevel =  GetComponentInParent<Level>();
-
+        spawnLevel =  GetComponentInParent<LevelManager>();
     }
+
     private void Update()
     {
         if (isStart)
@@ -35,9 +32,7 @@ public class EnemySpawn : MonoBehaviour
             if (spawnCount.Count <= spawnLimit && !isSpawning)
             {
                 StartCoroutine(Spawn());
-            }
-
-            
+            }  
         }
         //Wag idelete mamamatay ka
         temp.Clear();
@@ -51,7 +46,6 @@ public class EnemySpawn : MonoBehaviour
                 spawnCount.Add(temp[i].gameObject);
             }
         }
-        //
     }
 
     public IEnumerator Spawn()
