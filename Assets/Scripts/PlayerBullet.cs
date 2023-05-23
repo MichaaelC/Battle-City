@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBullet : MonoBehaviour
+public class PlayerBullet : MonoBehaviour
 {
     [SerializeField] private float timer = 5f;
-    [SerializeField] private int damage = 1;
     [SerializeField] private int health = 1;
+    [SerializeField] private int damage = 1;
 
     void Start()
     {
@@ -20,19 +20,16 @@ public class EnemyBullet : MonoBehaviour
             collision.GetComponent<HealthBase>().GetDamage(damage);
             Hit();
         }
-
         else if (collision.GetComponent<HealthDestructable>())
         {
             collision.GetComponent<HealthDestructable>().GetDamage(damage);
             Hit();
         }
-
-        else if(collision.GetComponent<HealthPlayer>()) 
+        else if(collision.GetComponent<HealthEnemy>()) 
         {
-            collision.GetComponent<HealthPlayer>().GetDamage(damage);
+            collision.GetComponent<HealthEnemy>().GetDamage(damage);
             Hit();
         }
-
         else if (collision.GetComponent<HealthIndestructable>())
         {
             Destroy(gameObject);
