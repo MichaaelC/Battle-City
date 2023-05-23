@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5140201121417987697}
-  - component: {fileID: 4403059442357507731}
   - component: {fileID: 6239058840741673496}
   - component: {fileID: 805162377608613807}
   - component: {fileID: 1016832410272813400}
+  - component: {fileID: 3227604419731605463}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -35,21 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4403059442357507731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7577868424177088284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cfcc0a6eb96ce843b0cc3e0436975a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  health: 100
-  gameUI: {fileID: 468336133729505534, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
 --- !u!212 &6239058840741673496
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -174,3 +159,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3227604419731605463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7577868424177088284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c4bc1fdbfc4e5042951edf7aa2b30ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  startingHealth: 10
