@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
         ps = GetComponent<PlayerShoot>();
         moveSpeedOriginal = moveSpeed;
     }
-
+    
     private void FixedUpdate()
     {
         Movement();
@@ -76,4 +76,6 @@ public class PlayerMovement : MonoBehaviour
     {
         ps.Shoot(dir);
     }
+
+
 }

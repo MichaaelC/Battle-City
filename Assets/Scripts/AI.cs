@@ -16,7 +16,6 @@ public class AI : MonoBehaviour
     private float raycastDistance = 4f;
     public float health = 100f;
     public float totalHealth = 0f;
-  
 
     void Start()
     {
@@ -37,6 +36,7 @@ public class AI : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 
  
     void Update()
@@ -101,7 +101,6 @@ public class AI : MonoBehaviour
         }
     }
 
-    
     public void MoveSpeedRestart()
         {
             movementSpeed = moveSpeedOriginal;
