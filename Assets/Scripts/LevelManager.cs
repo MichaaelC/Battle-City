@@ -1,18 +1,102 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    
+    public GameObject player;
+    public GameObject playerBase;
+    public PlayerSpawn playerSpawn;
+    public int playerLives = 3;
+    public bool isEnabled = false;
+
+    public int spawnLimit;
+    public EnemySpawn[] enemySpawn;
+    public GameObject levelCompleteUI;
+
     void Start()
     {
+        isEnabled = true;
+        playerSpawn = FindObjectOfType<PlayerSpawn>();
+        playerBase = FindObjectOfType<HealthBase>().gameObject;
+        player = playerSpawn.player;
+        StartSpawn();
         
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        CheckPlayerLives();
+        CheckIfSpawnsAreFinished();
+        CheckIfBaseIsAlive();
+    }
+
+    private void CheckIfBaseIsAlive()
+    {
+        if(playerBase == null)
+        {
+            InGameUI ui = FindObjectOfType<InGameUI>();
+            ui.GameOverScreen(true);
+        }
+    }
+
+    private void CheckPlayerLives()
+    {
+        if (playerSpawn.player == null)
+        {
+            if (playerLives > 0)
+            {
+                playerLives--;
+                playerSpawn.SpawnPlayer();
+            }
+            else if (playerLives == 0)
+            {
+                playerLives--;
+                playerSpawn.SpawnPlayer();
+                playerSpawn.isEnabled = false;
+            }
+            else if (playerLives < 0)
+            {
+                InGameUI ui = FindObjectOfType<InGameUI>();
+                ui.GameOverScreen(true);
+            }
+        }
+    }
+
+    private void CheckIfSpawnsAreFinished()
+    {
+        if (spawnLimit <= 0 && CheckSpawnsIfFinished())
+        {
+            levelCompleteUI.SetActive(true);
+        }
+        else if (spawnLimit <= 0)
+        {
+            foreach (var item in enemySpawn)
+            {
+                item.StopSpawning();
+            }
+        }
+    }
+
+    public void StartSpawn()
+    {
+        foreach (var item in enemySpawn)
+        {
+            item.StartSpawning();
+        }
+    }
+
+    private bool CheckSpawnsIfFinished()
+    {
+        bool value = true;
+        for (int i = 0; i < enemySpawn.Length; i++)
+        {
+            if (!enemySpawn[i].isEmpty())
+            {
+                value = false;
+            }
+        }
+        return value;
     }
 }
