@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,10 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerShoot ps;
     private Direction dir;
 
-    public float currentSpeed;
-    public float increasedSpeed = 10f;
-    //private int currentFirePower;
-
+    private float originalSpeed;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -26,18 +24,25 @@ public class PlayerMovement : MonoBehaviour
         tf = GetComponent<Transform>();
         ps = GetComponent<PlayerShoot>();
         moveSpeedOriginal = moveSpeed;
-        currentSpeed = moveSpeed;
+        //moveSpeedOriginal = moveSpeed;
+        originalSpeed = moveSpeed;
     }
-    
+
+    public void IncreaseSpeed(float multiplier)
+    {
+        moveSpeed *= multiplier;
+    }
+
+    public void ResetSpeed(float multiplier)
+    {
+        moveSpeed /= multiplier;
+    }
+
     private void FixedUpdate()
     {
         Movement();
     }
 
-    public void IncreaseSpeed()
-    {
-        currentSpeed = increasedSpeed;
-    }
     
     private void FaceDirection()
     {

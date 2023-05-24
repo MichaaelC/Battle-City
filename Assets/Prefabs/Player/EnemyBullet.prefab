@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -5959485842013822584}
   m_Layer: 0
   m_Name: EnemyBullet
-  m_TagString: Untagged
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: 5
   damage: 1
+  health: 1
 --- !u!61 &6365069982270267495
 BoxCollider2D:
   m_ObjectHideFlags: 0

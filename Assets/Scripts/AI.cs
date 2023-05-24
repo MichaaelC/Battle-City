@@ -17,6 +17,8 @@ public class AI : MonoBehaviour
     public float health = 100f;
     public float totalHealth = 0f;
 
+    private bool isFrozen = false;
+    private Vector3 originalMovement;
     void Start()
     {
         
@@ -25,8 +27,10 @@ public class AI : MonoBehaviour
         movementDirection = Vector2.down;
         moveSpeedOriginal = movementSpeed;
         totalHealth += health;
-    
+        originalMovement = rb.velocity;
     }
+
+  
     public void TakeDamage(float damage)
     {
         health -= damage;
@@ -60,8 +64,28 @@ public class AI : MonoBehaviour
         {
             hitEnemy = false;
         }
+
+        if (!isFrozen)
+        {
+            RandomDirection();
+        }
     }
 
+    public void Freeze(float duration)
+    {
+        if (!isFrozen)
+        {
+            isFrozen = true;
+            rb.velocity = Vector3.zero;
+            Invoke(nameof(ResumeAI), duration);
+        }   
+    }
+
+    private void ResumeAI()
+    {
+        isFrozen = false;
+        rb.velocity = originalMovement;
+    }
     void FixedUpdate()
     {
 

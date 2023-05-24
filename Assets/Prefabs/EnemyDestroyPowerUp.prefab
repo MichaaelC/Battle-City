@@ -75,9 +75,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5660378, g: 0.5521538, b: 0.5521538, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8baebf77ed46d4f47bc7e3b189e96fee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUpType: 3
+  powerUpType: 1
   powerUpDuration: 4
 --- !u!60 &7235125448453783524
 PolygonCollider2D:

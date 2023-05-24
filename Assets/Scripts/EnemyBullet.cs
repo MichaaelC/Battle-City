@@ -8,6 +8,7 @@ public class EnemyBullet : MonoBehaviour
     [SerializeField] private int damage = 1;
     [SerializeField] private int health = 1;
 
+
     void Start()
     {
         Destroy(gameObject, timer);
