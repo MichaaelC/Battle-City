@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc1bd19df3282604ba22a455d47b2068, type: 3}
-  m_Name: Default Tile Set Config
+  m_Name: Water Tile Set Config 1
   m_EditorClassIdentifier: 
   AllInputTiles:
   - {fileID: 11400000, guid: ff227a6873b739f43a2a581caf84c9a6, type: 2}
@@ -33,12 +33,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6884524d0e0f9ec4bb39eba646de45a2, type: 2}
   - {fileID: 11400000, guid: 07f33d13ef1b813488bf1dbc95dae5f5, type: 2}
   - {fileID: 11400000, guid: a1594e353e7e91745a5188268b8ab764, type: 2}
+  - {fileID: 11400000, guid: 89c93c746dc359843978ff691b254586, type: 2}
+  - {fileID: 11400000, guid: 2406e576e78083342b26362e27ac1501, type: 2}
+  - {fileID: 11400000, guid: 4124db62779802d458225dc67e82b34d, type: 2}
   UniqueInputTiles: []
   ForeGroundTiles:
   - {fileID: 11400000, guid: 357ca3a6ad58e1e46b48b30b0c20eb57, type: 2}
   - {fileID: 11400000, guid: a1594e353e7e91745a5188268b8ab764, type: 2}
   - {fileID: 11400000, guid: 48c59c784ede56849b7154a851439d97, type: 2}
   - {fileID: 11400000, guid: 8aa0120cb9b03314380c6f538a8c3ce4, type: 2}
+  - {fileID: 11400000, guid: 89c93c746dc359843978ff691b254586, type: 2}
+  - {fileID: 11400000, guid: 2406e576e78083342b26362e27ac1501, type: 2}
+  - {fileID: 11400000, guid: 4124db62779802d458225dc67e82b34d, type: 2}
   BackGroundTiles: []
   FilledTiles:
   - {fileID: 11400000, guid: ff227a6873b739f43a2a581caf84c9a6, type: 2}
