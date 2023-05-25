@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1bd19df3282604ba22a455d47b2068, type: 3}
+  m_Name: WaterySO
+  m_EditorClassIdentifier: 
+  AllInputTiles:
+  - {fileID: 11400000, guid: ff227a6873b739f43a2a581caf84c9a6, type: 2}
+  - {fileID: 11400000, guid: f367c26bd70ae1c4291a868eebc361df, type: 2}
+  - {fileID: 11400000, guid: 270fb65d9a32d0349ac9c491c2860478, type: 2}
+  - {fileID: 11400000, guid: ee6f81bf03ed2364380414211494b362, type: 2}
+  - {fileID: 11400000, guid: ea2b05e45e7ae0147a34965d44b857ff, type: 2}
+  - {fileID: 11400000, guid: 76432de6ba3319746ac4106b5c2f1a60, type: 2}
+  - {fileID: 11400000, guid: 91fde20db2f96854f9a52310efe5d4a5, type: 2}
+  - {fileID: 11400000, guid: d8049ab731e53c846a5c4266bf1f8888, type: 2}
+  - {fileID: 11400000, guid: 0264f54ee70839a44a022380ff2b016d, type: 2}
+  - {fileID: 11400000, guid: 39bcf3c385a31274089e5853eb38e5c2, type: 2}
+  - {fileID: 11400000, guid: 7890f9759d31a154db7424c4fe304415, type: 2}
+  - {fileID: 11400000, guid: 9d9e48bdbc765254e8ca867e6988e8f3, type: 2}
+  - {fileID: 11400000, guid: 833699b3ec6c6e34bbeb8b46859f3fe1, type: 2}
+  - {fileID: 11400000, guid: 9bbf3cd205e4f7644ba07d72aad030b7, type: 2}
+  - {fileID: 11400000, guid: 357ca3a6ad58e1e46b48b30b0c20eb57, type: 2}
+  - {fileID: 11400000, guid: 8aa0120cb9b03314380c6f538a8c3ce4, type: 2}
+  - {fileID: 11400000, guid: 48c59c784ede56849b7154a851439d97, type: 2}
+  - {fileID: 11400000, guid: 6884524d0e0f9ec4bb39eba646de45a2, type: 2}
+  - {fileID: 11400000, guid: 07f33d13ef1b813488bf1dbc95dae5f5, type: 2}
+  - {fileID: 11400000, guid: a1594e353e7e91745a5188268b8ab764, type: 2}
+  - {fileID: 11400000, guid: 89c93c746dc359843978ff691b254586, type: 2}
+  - {fileID: 11400000, guid: 2406e576e78083342b26362e27ac1501, type: 2}
+  - {fileID: 11400000, guid: 4124db62779802d458225dc67e82b34d, type: 2}
+  UniqueInputTiles: []
+  ForeGroundTiles:
+  - {fileID: 11400000, guid: 357ca3a6ad58e1e46b48b30b0c20eb57, type: 2}
+  - {fileID: 11400000, guid: a1594e353e7e91745a5188268b8ab764, type: 2}
+  - {fileID: 11400000, guid: 48c59c784ede56849b7154a851439d97, type: 2}
+  - {fileID: 11400000, guid: 8aa0120cb9b03314380c6f538a8c3ce4, type: 2}
+  - {fileID: 11400000, guid: 89c93c746dc359843978ff691b254586, type: 2}
+  - {fileID: 11400000, guid: 2406e576e78083342b26362e27ac1501, type: 2}
+  - {fileID: 11400000, guid: 4124db62779802d458225dc67e82b34d, type: 2}
+  BackGroundTiles: []
+  FilledTiles:
+  - {fileID: 11400000, guid: ff227a6873b739f43a2a581caf84c9a6, type: 2}
+  - {fileID: 11400000, guid: 6884524d0e0f9ec4bb39eba646de45a2, type: 2}
+  EdgeUpTiles: []
+  EdgeDownTiles: []
+  EdgeLeftTiles: []
+  EdgeRightTiles: []
+  ElbowUpLeftTiles: []
+  ElbowUpRightTiles: []
+  ElbowDownLeftTiles: []
+  ElbowDownRightTiles: []
+  CornerUpLeftTiles: []
+  CornerUpRightTiles: []
+  CornerDownLeftTiles: []
+  CornerDownRightTiles: []
+  CornerULDRTiles: []
+  CornerURDLTiles: []
+  FourFaceTiles:
+  - {fileID: 11400000, guid: f367c26bd70ae1c4291a868eebc361df, type: 2}
+  VerticalTiles:
+  - {fileID: 11400000, guid: 270fb65d9a32d0349ac9c491c2860478, type: 2}
+  HorizontalTiles:
+  - {fileID: 11400000, guid: ee6f81bf03ed2364380414211494b362, type: 2}
+  TwoFaceUpLeftTiles:
+  - {fileID: 11400000, guid: ea2b05e45e7ae0147a34965d44b857ff, type: 2}
+  TwoFaceUpRightTiles:
+  - {fileID: 11400000, guid: 76432de6ba3319746ac4106b5c2f1a60, type: 2}
+  TwoFaceDownLeftTiles:
+  - {fileID: 11400000, guid: 91fde20db2f96854f9a52310efe5d4a5, type: 2}
+  TwoFaceDownRightTiles:
+  - {fileID: 11400000, guid: d8049ab731e53c846a5c4266bf1f8888, type: 2}
+  ThreeFaceUpTiles:
+  - {fileID: 11400000, guid: 0264f54ee70839a44a022380ff2b016d, type: 2}
+  ThreeFaceDownTiles:
+  - {fileID: 11400000, guid: 39bcf3c385a31274089e5853eb38e5c2, type: 2}
+  ThreeFaceLeftTiles:
+  - {fileID: 11400000, guid: 7890f9759d31a154db7424c4fe304415, type: 2}
+  ThreeFaceRightTiles:
+  - {fileID: 11400000, guid: 9d9e48bdbc765254e8ca867e6988e8f3, type: 2}
+  OneFaceUpTiles: []
+  OneFaceDownTiles: []
+  OneFaceLeftTiles: []
+  OneFaceRightTiles: []

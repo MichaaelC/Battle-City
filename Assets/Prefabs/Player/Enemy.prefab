@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4577089217754832003}
   - component: {fileID: 7071596724041922667}
+  - component: {fileID: 3670674919210627810}
   - component: {fileID: 9033399611955607786}
   - component: {fileID: 8959852259137588174}
   - component: {fileID: 2105581684967664423}
   - component: {fileID: 9200210246163403808}
-  - component: {fileID: 3670674919210627810}
   m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
@@ -50,10 +50,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 3886228028866477266, guid: 586a768baa98ea94ebfd6797c43f1f63, type: 3}
-  firePoint: {fileID: 4577089217754832003}
   bulletSpeed: 10
-  minDelay: 0.5
-  maxDelay: 1.5
+  minDelay: 1
+  maxDelay: 3
+--- !u!114 &3670674919210627810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8739554865664417538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e16fe542486a51c4daf4d45c2921044a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  startingHealth: 1
+  health: 0
 --- !u!114 &9033399611955607786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,10 +81,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2.5
-  minChangeDirectionTime: 0.5
-  maxChangeDirectionTime: 1.5
-  health: 1
-  totalHealth: 0
+  minChangeDirectionTime: 1
+  maxChangeDirectionTime: 2
 --- !u!212 &8959852259137588174
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -195,18 +207,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9300463, y: 1.0220523}
   m_EdgeRadius: 0
---- !u!114 &3670674919210627810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8739554865664417538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e16fe542486a51c4daf4d45c2921044a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 2
-  startingHealth: 2
-  health: 0

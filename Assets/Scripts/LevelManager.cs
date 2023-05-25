@@ -1,19 +1,16 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
     public GameObject player;
     public GameObject playerBase;
-    public PlayerSpawn playerSpawn;
+    public GameObject levelCompleteUI;
     public int playerLives = 3;
     public bool isEnabled = false;
 
     public int spawnLimit;
     public EnemySpawn[] enemySpawn;
-    public GameObject levelCompleteUI;
+    private PlayerSpawn playerSpawn;
 
     void Start()
     {
@@ -22,10 +19,9 @@ public class LevelManager : MonoBehaviour
         playerBase = FindObjectOfType<HealthBase>().gameObject;
         player = playerSpawn.player;
         StartSpawn();
-        
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         CheckPlayerLives();
         CheckIfSpawnsAreFinished();
@@ -36,8 +32,7 @@ public class LevelManager : MonoBehaviour
     {
         if(playerBase == null)
         {
-            InGameUI ui = FindObjectOfType<InGameUI>();
-            ui.GameOverScreen(true);
+            GameOver();
         }
     }
 
@@ -58,8 +53,7 @@ public class LevelManager : MonoBehaviour
             }
             else if (playerLives < 0)
             {
-                InGameUI ui = FindObjectOfType<InGameUI>();
-                ui.GameOverScreen(true);
+                GameOver();
             }
         }
     }
@@ -98,5 +92,11 @@ public class LevelManager : MonoBehaviour
             }
         }
         return value;
+    }
+
+    private static void GameOver()
+    {
+        InGameUI ui = FindObjectOfType<InGameUI>();
+        ui.ShowGameOverScreen();
     }
 }
