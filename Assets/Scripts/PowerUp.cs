@@ -24,13 +24,13 @@ public class PowerUp : MonoBehaviour
     public void ApplyPowerUpEffect(GameObject player)
     {
         PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
-        AI[] enemies;
+        EnemyMoveAI[] enemies;
         //EnemySpawn[] enemySpawns;
         switch (powerUpType)
         {
             case PowerUpType.EnemyDestroy:
-                enemies = FindObjectsOfType<AI>();
-                foreach (AI enemy in enemies)
+                enemies = FindObjectsOfType<EnemyMoveAI>();
+                foreach (EnemyMoveAI enemy in enemies)
                 {
                     enemy.DestroyEnemy();
                 }

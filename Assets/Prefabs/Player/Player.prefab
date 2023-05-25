@@ -260,12 +260,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7861958584944698577}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b456a06dd0dd25e4ea9ce57a2d7263a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefabs: {fileID: 1242570535799605198, guid: b2700d40103cd504c9ce9ada554ee0f7, type: 3}
+  fireRate: 1.5
+  isReadyToFire: 1
   bulletSpeed: 15
 --- !u!114 &1004931728007369985
 MonoBehaviour:
