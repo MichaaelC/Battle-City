@@ -191,7 +191,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25362988a8f8eee44ae97b1084fa046c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOver: {fileID: 7663784842982455986}
+  gameOver: {fileID: 3997669357421877715}
+  levelComplete: {fileID: 4204649661241628217}
 --- !u!223 &4933611203283430053
 Canvas:
   m_ObjectHideFlags: 0
@@ -377,9 +378,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7663784842982455986}
-        m_TargetAssemblyTypeName: GameOverMenu, Assembly-CSharp
-        m_MethodName: MainMenuButton
+      - m_Target: {fileID: 468336133729505534}
+        m_TargetAssemblyTypeName: InGameUI, Assembly-CSharp
+        m_MethodName: ToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -646,8 +647,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7663784842982455986}
-        m_TargetAssemblyTypeName: GameOverMenu, Assembly-CSharp
+      - m_Target: {fileID: 468336133729505534}
+        m_TargetAssemblyTypeName: InGameUI, Assembly-CSharp
         m_MethodName: RestartGameButton
         m_Mode: 1
         m_Arguments:
@@ -806,7 +807,6 @@ GameObject:
   - component: {fileID: 2391421250214146664}
   - component: {fileID: 3795807141938796311}
   - component: {fileID: 7090730119738162930}
-  - component: {fileID: 7663784842982455986}
   m_Layer: 5
   m_Name: BackGround
   m_TagString: Untagged
@@ -875,18 +875,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7663784842982455986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3997669357421877715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe027340a735d5748badd39068034954, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4204649661241628217
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,7 +886,6 @@ GameObject:
   - component: {fileID: 1412335325707092069}
   - component: {fileID: 1194402514639163598}
   - component: {fileID: 4702090852658598302}
-  - component: {fileID: 1051078820901935723}
   m_Layer: 5
   m_Name: LevelComplete
   m_TagString: Untagged
@@ -967,18 +954,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1051078820901935723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4204649661241628217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6fbea9aea524324091980aca659c734, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4906587154340363159
 GameObject:
   m_ObjectHideFlags: 0
@@ -1101,8 +1076,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1051078820901935723}
-        m_TargetAssemblyTypeName: LevelCompleteMenu, Assembly-CSharp
+      - m_Target: {fileID: 468336133729505534}
+        m_TargetAssemblyTypeName: InGameUI, Assembly-CSharp
         m_MethodName: NextLevel
         m_Mode: 1
         m_Arguments:
@@ -1235,8 +1210,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1051078820901935723}
-        m_TargetAssemblyTypeName: LevelCompleteMenu, Assembly-CSharp
+      - m_Target: {fileID: 468336133729505534}
+        m_TargetAssemblyTypeName: InGameUI, Assembly-CSharp
         m_MethodName: ToMainMenu
         m_Mode: 1
         m_Arguments:
