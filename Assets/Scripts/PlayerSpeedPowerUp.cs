@@ -35,7 +35,8 @@ public class PlayerSpeedPowerUp : MonoBehaviour
         yield return new WaitForSeconds(duration);
         playerMovement.ResetSpeed(speedMultiplier);
         powerUpActivated = false;
-        EnablePowerUp();
+        Destroy(this.gameObject);
+        //EnablePowerUp();
         //GetComponent<Collider2D>().enabled = true;
         //GetComponent<SpriteRenderer>().enabled = true;
         //gameObject.SetActive(true);

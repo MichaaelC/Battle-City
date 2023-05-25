@@ -14,6 +14,8 @@ public class PowerUpSpawner : MonoBehaviour
     public float minY = -6;
     public float maxY = 6;
     private int currentPowerUps = 0;
+
+    private List<Vector2> usedPosition = new List<Vector2>();
     private void Start()
     {
         InvokeRepeating("SpawnPowerUp", 0f, spawnDelay);
@@ -26,12 +28,16 @@ public class PowerUpSpawner : MonoBehaviour
             return;
         }
         Vector2 randomPosition = GenerateRandomPosition();
+
+        while (usedPosition.Contains(randomPosition))
+        {
+            randomPosition = GenerateRandomPosition();
+        }
         int randomIndex = Random.Range(0, powerUpPrefabs.Length);
         GameObject randomPowerUpPrefab = powerUpPrefabs[randomIndex];
         Instantiate(randomPowerUpPrefab, randomPosition, Quaternion.identity);
 
-        //Instantiate(powerUpPrefabs, randomPosition, Quaternion.identity);
-
+        usedPosition.Add(randomPosition);
         currentPowerUps++;
     }
 
@@ -40,5 +46,11 @@ public class PowerUpSpawner : MonoBehaviour
         float x = Random.Range(minX, maxX);
         float y = Random.Range(minY, maxY);
         return new Vector2(x, y);
+    }
+
+    public void PowerUpCollected(Vector2 position)
+    {
+        currentPowerUps--;
+        usedPosition.Remove(position);
     }
 }

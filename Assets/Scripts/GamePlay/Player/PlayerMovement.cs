@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void ResetSpeed(float multiplier)
     {
-        moveSpeed /= multiplier;
+        moveSpeed = multiplier;
     }
 
     private void FixedUpdate()
