@@ -107,7 +107,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 85956218f983eac4c9e1ac0891b220e7, type: 3}
-  m_Color: {r: 0.43529412, g: 0.83137256, b: 0.8666667, a: 1}
+  m_Color: {r: 0, g: 0.9129884, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -127,7 +127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3476886109921949669}
   - component: {fileID: 1848074273011744647}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

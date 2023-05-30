@@ -13,7 +13,7 @@ public class PowerUp : MonoBehaviour
     public PowerUpType powerUpType;
     public float powerUpDuration = 10f;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<PlayerMovement>())
         {
@@ -21,14 +21,16 @@ public class PowerUp : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     public void ApplyPowerUpEffect(GameObject player)
     {
-        PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
+        //PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
         EnemyMoveAI[] enemies;
         //EnemySpawn[] enemySpawns;
         switch (powerUpType)
         {
             case PowerUpType.EnemyDestroy:
+                Debug.Log("destroyed");
                 enemies = FindObjectsOfType<EnemyMoveAI>();
                 foreach (EnemyMoveAI enemy in enemies)
                 {

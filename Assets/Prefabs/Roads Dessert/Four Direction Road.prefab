@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8472948933894882480}
   - component: {fileID: 971327976484439633}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Four Direction Road
   m_TagString: Untagged
   m_Icon: {fileID: 0}

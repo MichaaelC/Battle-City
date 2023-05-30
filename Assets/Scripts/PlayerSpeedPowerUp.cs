@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerSpeedPowerUp : MonoBehaviour
@@ -9,7 +7,7 @@ public class PlayerSpeedPowerUp : MonoBehaviour
     public float powerUpDuration = 5f;
 
     private static bool powerUpActivated = false;
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && !powerUpActivated)
         {
@@ -27,13 +25,13 @@ public class PlayerSpeedPowerUp : MonoBehaviour
                 //Destroy(gameObject);
             }
         }
-    }
-    
+    } 
+
 
     IEnumerator ResetSpeed(PlayerMovement playerMovement, float duration)
     {
         yield return new WaitForSeconds(duration);
-        playerMovement.ResetSpeed(speedMultiplier);
+        playerMovement.MoveSpeedReset();
         powerUpActivated = false;
         Destroy(this.gameObject);
         //EnablePowerUp();

@@ -18,6 +18,7 @@ public class LevelManager : MonoBehaviour
         playerSpawn = FindObjectOfType<PlayerSpawn>();
         playerBase = FindObjectOfType<HealthBase>().gameObject;
         player = playerSpawn.player;
+        enemySpawn = GetComponentsInChildren<EnemySpawn>();
         StartSpawn();
     }
 

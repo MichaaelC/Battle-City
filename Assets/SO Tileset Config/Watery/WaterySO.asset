@@ -14,15 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllInputTiles:
   - {fileID: 11400000, guid: aa16c23113f4c7a438f7a5a73a6c778a, type: 2}
-  - {fileID: 11400000, guid: e8577888b78215949aede3579c8771db, type: 2}
   - {fileID: 11400000, guid: 1855c10755bc17a4097607ce3d6b180f, type: 2}
   - {fileID: 11400000, guid: d66f7c930a28cc34d89a3ec78e19eee6, type: 2}
   - {fileID: 11400000, guid: 6160a5ce9a646364fb53facff892dfa6, type: 2}
-  - {fileID: 11400000, guid: c8b1235f26d9ba64585aa40b14429aab, type: 2}
   - {fileID: 11400000, guid: 830ea6c076fb105469a95bb3f973f7be, type: 2}
   - {fileID: 11400000, guid: 139770e75e471124e9ad71724ed35414, type: 2}
-  - {fileID: 11400000, guid: fbf7bbf55b4c1a94097a1ee051cc4107, type: 2}
-  - {fileID: 11400000, guid: 6814fc109903cbc43acfa935775de106, type: 2}
   - {fileID: 11400000, guid: 33e91220e9cb3a3439a677b2e8d74814, type: 2}
   - {fileID: 11400000, guid: a3c94caa32a3ab34ba51bfce4802c9e2, type: 2}
   - {fileID: 11400000, guid: e979e1cee0ec9dd49adfec241e8022a8, type: 2}
@@ -37,17 +33,13 @@ MonoBehaviour:
   UniqueInputTiles: []
   ForeGroundTiles:
   - {fileID: 11400000, guid: aa16c23113f4c7a438f7a5a73a6c778a, type: 2}
-  - {fileID: 11400000, guid: e8577888b78215949aede3579c8771db, type: 2}
   - {fileID: 11400000, guid: 1855c10755bc17a4097607ce3d6b180f, type: 2}
   - {fileID: 11400000, guid: d66f7c930a28cc34d89a3ec78e19eee6, type: 2}
   - {fileID: 11400000, guid: 6160a5ce9a646364fb53facff892dfa6, type: 2}
-  - {fileID: 11400000, guid: c8b1235f26d9ba64585aa40b14429aab, type: 2}
   - {fileID: 11400000, guid: 830ea6c076fb105469a95bb3f973f7be, type: 2}
   BackGroundTiles: []
   FilledTiles:
   - {fileID: 11400000, guid: 139770e75e471124e9ad71724ed35414, type: 2}
-  - {fileID: 11400000, guid: fbf7bbf55b4c1a94097a1ee051cc4107, type: 2}
-  - {fileID: 11400000, guid: 6814fc109903cbc43acfa935775de106, type: 2}
   EdgeUpTiles: []
   EdgeDownTiles: []
   EdgeLeftTiles: []

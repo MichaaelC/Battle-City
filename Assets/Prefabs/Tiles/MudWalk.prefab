@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3871651689116856347}
   - component: {fileID: 3767523546113036145}
   - component: {fileID: 7214880873164942028}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MudWalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}

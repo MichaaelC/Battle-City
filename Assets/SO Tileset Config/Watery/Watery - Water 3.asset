@@ -12,49 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1960bd12f2473454e8d8e36099712b1e, type: 3}
   m_Name: Watery - Water 3
   m_EditorClassIdentifier: 
-  gameObject: {fileID: 5926219164282709211, guid: 644219a85b7014844b785f811883e127, type: 3}
-  id: 16
-  compatibleTop:
-  - {fileID: 11400000, guid: 357ca3a6ad58e1e46b48b30b0c20eb57, type: 2}
-  - {fileID: 11400000, guid: a1594e353e7e91745a5188268b8ab764, type: 2}
-  - {fileID: 11400000, guid: 48c59c784ede56849b7154a851439d97, type: 2}
-  - {fileID: 11400000}
-  - {fileID: 11400000, guid: ff227a6873b739f43a2a581caf84c9a6, type: 2}
-  - {fileID: 11400000, guid: 6884524d0e0f9ec4bb39eba646de45a2, type: 2}
-  - {fileID: 11400000, guid: ee6f81bf03ed2364380414211494b362, type: 2}
-  - {fileID: 11400000, guid: ea2b05e45e7ae0147a34965d44b857ff, type: 2}
-  - {fileID: 11400000, guid: 76432de6ba3319746ac4106b5c2f1a60, type: 2}
-  - {fileID: 11400000, guid: 0264f54ee70839a44a022380ff2b016d, type: 2}
-  compatibleBottom:
-  - {fileID: 11400000, guid: 357ca3a6ad58e1e46b48b30b0c20eb57, type: 2}
-  - {fileID: 11400000, guid: a1594e353e7e91745a5188268b8ab764, type: 2}
-  - {fileID: 11400000, guid: 48c59c784ede56849b7154a851439d97, type: 2}
-  - {fileID: 11400000}
-  - {fileID: 11400000, guid: ff227a6873b739f43a2a581caf84c9a6, type: 2}
-  - {fileID: 11400000, guid: 6884524d0e0f9ec4bb39eba646de45a2, type: 2}
-  - {fileID: 11400000, guid: ee6f81bf03ed2364380414211494b362, type: 2}
-  - {fileID: 11400000, guid: 91fde20db2f96854f9a52310efe5d4a5, type: 2}
-  - {fileID: 11400000, guid: d8049ab731e53c846a5c4266bf1f8888, type: 2}
-  - {fileID: 11400000, guid: 39bcf3c385a31274089e5853eb38e5c2, type: 2}
-  compatibleLeft:
-  - {fileID: 11400000, guid: 357ca3a6ad58e1e46b48b30b0c20eb57, type: 2}
-  - {fileID: 11400000, guid: a1594e353e7e91745a5188268b8ab764, type: 2}
-  - {fileID: 11400000, guid: 48c59c784ede56849b7154a851439d97, type: 2}
-  - {fileID: 11400000}
-  - {fileID: 11400000, guid: ff227a6873b739f43a2a581caf84c9a6, type: 2}
-  - {fileID: 11400000, guid: 6884524d0e0f9ec4bb39eba646de45a2, type: 2}
-  - {fileID: 11400000, guid: 270fb65d9a32d0349ac9c491c2860478, type: 2}
-  - {fileID: 11400000, guid: ea2b05e45e7ae0147a34965d44b857ff, type: 2}
-  - {fileID: 11400000, guid: 91fde20db2f96854f9a52310efe5d4a5, type: 2}
-  - {fileID: 11400000, guid: 7890f9759d31a154db7424c4fe304415, type: 2}
-  compatibleRight:
-  - {fileID: 11400000, guid: 357ca3a6ad58e1e46b48b30b0c20eb57, type: 2}
-  - {fileID: 11400000, guid: a1594e353e7e91745a5188268b8ab764, type: 2}
-  - {fileID: 11400000, guid: 48c59c784ede56849b7154a851439d97, type: 2}
-  - {fileID: 11400000}
-  - {fileID: 11400000, guid: ff227a6873b739f43a2a581caf84c9a6, type: 2}
-  - {fileID: 11400000, guid: 6884524d0e0f9ec4bb39eba646de45a2, type: 2}
-  - {fileID: 11400000, guid: 270fb65d9a32d0349ac9c491c2860478, type: 2}
-  - {fileID: 11400000, guid: 76432de6ba3319746ac4106b5c2f1a60, type: 2}
-  - {fileID: 11400000, guid: d8049ab731e53c846a5c4266bf1f8888, type: 2}
-  - {fileID: 11400000, guid: 9d9e48bdbc765254e8ca867e6988e8f3, type: 2}
+  gameObject: {fileID: 5926219164282709211, guid: e20b36854b0cf2c41973422251fc214a, type: 3}
+  id: 6
+  compatibleTop: []
+  compatibleBottom: []
+  compatibleLeft: []
+  compatibleRight: []

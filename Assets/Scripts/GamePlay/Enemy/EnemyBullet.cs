@@ -1,13 +1,15 @@
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
     [SerializeField] private float timer = 5f;
-    [SerializeField] private int damage = 1;
     [SerializeField] private int health = 1;
+    [SerializeField] private int damage = 1;
 
+    [SerializeField] private Vector2 explosionRadius = new Vector2(1f, 1f);
+    private List<Collider2D> explosionHits;
 
     void Start()
     {
@@ -16,36 +18,52 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<HealthBase>())
-        {
-            collision.GetComponent<HealthBase>().GetDamage(damage);
-            Hit();
-        }
+        explosionHits = Physics2D.OverlapBoxAll(transform.position, explosionRadius, 0f).ToList();
 
-        else if (collision.GetComponent<HealthDestructable>())
+        foreach (var item in explosionHits)
         {
-            collision.GetComponent<HealthDestructable>().GetDamage(damage);
-            Hit();
-        }
+            if (item.gameObject.GetComponent<HealthBase>())
+            {
+                item.GetComponent<HealthBase>().GetDamage(damage);
+                Hit();
+            }
+            else if (item.GetComponent<HealthDestructable>())
+            {
+                item.GetComponent<HealthDestructable>().GetDamage(damage);
+                Hit();
+            }
 
-        else if(collision.GetComponent<HealthPlayer>()) 
-        {
-            collision.GetComponent<HealthPlayer>().GetDamage(damage);
-            Hit();
-        }
+            else if (item.GetComponent<HealthPlayer>())
+            {
+                item.GetComponent<HealthPlayer>().GetDamage(damage);
+                Hit();
+            }
 
-        else if (collision.GetComponent<HealthIndestructable>())
-        {
-            Destroy(gameObject);
+            else if (item.GetComponent<PlayerBullet>())
+            {
+                item.GetComponent<PlayerBullet>().Hit();
+            }
+
+            else if (item.GetComponent<HealthIndestructable>() || item.GetComponent<Wall>())
+            {
+                Destroy(gameObject);
+            }
         }
+        explosionHits.Clear();
     }
 
-    private void Hit()
+    public void Hit()
     {
         health--;
         if (health <= 0)
         {
             Destroy(this.gameObject);
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireCube(transform.position, explosionRadius);
     }
 }

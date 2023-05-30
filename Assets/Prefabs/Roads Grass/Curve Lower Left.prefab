@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8472948933894882480}
   - component: {fileID: 277351664824715698}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Curve Lower Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f46a45cd39751c94fab7beea65cefe30, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 959ff326c85d32644b91efb436ce476f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
