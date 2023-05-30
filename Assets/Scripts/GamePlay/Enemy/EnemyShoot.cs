@@ -31,7 +31,7 @@ public class EnemyShoot : MonoBehaviour
         }
     }
 
-    void Fire()
+    private void Fire()
     {
         GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();

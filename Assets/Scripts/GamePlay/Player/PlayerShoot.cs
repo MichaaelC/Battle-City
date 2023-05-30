@@ -26,12 +26,15 @@ public class PlayerShoot : MonoBehaviour
                 case Direction.up:
                     bullet.GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
                     break;
+
                 case Direction.down:
                     bullet.GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
                     break;
+
                 case Direction.left:
                     bullet.GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
                     break;
+
                 case Direction.right:
                     bullet.GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
                     break;

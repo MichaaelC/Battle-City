@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,9 +7,9 @@ public enum Direction
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    
+
     private float moveSpeedOriginal;
-    
+
     private Rigidbody2D rb;
     private PlayerShoot ps;
     private Vector2 direction;
@@ -54,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         else if (direction.x == -1 && direction.y == 0)
         {
             transform.eulerAngles = new Vector3(0f, 0f, 90f);
-            dir = Direction.left;   
+            dir = Direction.left;
         }
         else if (direction.x == 0 && direction.y == 1)
         {
@@ -83,6 +82,4 @@ public class PlayerMovement : MonoBehaviour
     {
         ps.Shoot(dir);
     }
-
-
 }

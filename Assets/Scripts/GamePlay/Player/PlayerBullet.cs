@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -8,13 +7,12 @@ public class PlayerBullet : MonoBehaviour
     [SerializeField] private float timer = 5f;
     [SerializeField] private int health = 1;
     [SerializeField] private int damage = 1;
-    [SerializeField] private GameObject explosion;
-   
+    [SerializeField] private GameObject explosionPrefab;
 
     [SerializeField] private Vector2 explosionRadius = new Vector2(1f, 1f);
     private List<Collider2D> explosionHits;
 
-    void Start()
+    private void Start()
     {
         Invoke("Explode", timer);
     }
@@ -35,7 +33,7 @@ public class PlayerBullet : MonoBehaviour
                 item.GetComponent<HealthDestructable>().GetDamage(damage);
                 Hit();
             }
-            else if(item.GetComponent<HealthEnemy>()) 
+            else if (item.GetComponent<HealthEnemy>())
             {
                 item.GetComponent<HealthEnemy>().GetDamage(damage);
                 Hit();
@@ -47,7 +45,7 @@ public class PlayerBullet : MonoBehaviour
             else if (item.GetComponent<HealthIndestructable>() || item.GetComponent<Wall>())
             {
                 Explode();
-            } 
+            }
         }
         explosionHits.Clear();
     }
@@ -63,14 +61,13 @@ public class PlayerBullet : MonoBehaviour
 
     public void Explode()
     {
-        Debug.Log("asd");
-        GameObject bulletExplosion = Instantiate(explosion, transform, true);
-        Debug.Log(bulletExplosion);
+        Instantiate(explosionPrefab, this.transform.position, this.transform.rotation);
         Destroy(this.gameObject);
     }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireCube(transform.position, explosionRadius);
+        Gizmos.DrawWireCube(this.transform.position, explosionRadius);
     }
 }

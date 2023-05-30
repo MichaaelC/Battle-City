@@ -7,14 +7,14 @@ public class EnemyBullet : MonoBehaviour
     [SerializeField] private float timer = 5f;
     [SerializeField] private int health = 1;
     [SerializeField] private int damage = 1;
-    [SerializeField] private GameObject enemyBulletPrefab;
+    [SerializeField] private GameObject explosionPrefab;
 
     [SerializeField] private Vector2 explosionRadius = new Vector2(1f, 1f);
     private List<Collider2D> explosionHits;
 
-    void Start()
+    private void Start()
     {
-        Invoke("Explode",  timer);
+        Invoke("Explode", timer);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -33,18 +33,15 @@ public class EnemyBullet : MonoBehaviour
                 item.GetComponent<HealthDestructable>().GetDamage(damage);
                 Hit();
             }
-
             else if (item.GetComponent<HealthPlayer>())
             {
                 item.GetComponent<HealthPlayer>().GetDamage(damage);
                 Hit();
             }
-
             else if (item.GetComponent<PlayerBullet>())
             {
                 item.GetComponent<PlayerBullet>().Hit();
             }
-
             else if (item.GetComponent<HealthIndestructable>() || item.GetComponent<Wall>())
             {
                 Explode();
@@ -64,10 +61,10 @@ public class EnemyBullet : MonoBehaviour
 
     public void Explode()
     {
-        GameObject explosion = Instantiate(enemyBulletPrefab, this.transform);
-        explosion.GetComponent<DestroyUtil>().DestroyHelper();
+        Instantiate(explosionPrefab, this.transform.position, this.transform.rotation);
         Destroy(this.gameObject);
     }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;

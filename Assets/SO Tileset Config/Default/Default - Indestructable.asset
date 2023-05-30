@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1960bd12f2473454e8d8e36099712b1e, type: 3}
   m_Name: Default - Indestructable
   m_EditorClassIdentifier: 
-  gameObject: {fileID: 5094700779142852352, guid: ef05f86c9add3bc4e891220957b86470, type: 3}
+  gameObject: {fileID: 5094700779142852352, guid: c55aa624a624dfa418822925d3bf0fc9, type: 3}
   id: 9
   compatibleTop:
   - {fileID: 11400000, guid: b116fb70d11fcdf4ab38a5626c478b0a, type: 2}

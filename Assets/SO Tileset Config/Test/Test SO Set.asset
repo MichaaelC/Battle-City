@@ -15,7 +15,6 @@ MonoBehaviour:
   AllInputTiles:
   - {fileID: 11400000, guid: 8c36f898886508048b2339b8c6648ab9, type: 2}
   - {fileID: 11400000, guid: 9c286d1a436a5f04787c61625beb258f, type: 2}
-  - {fileID: 11400000, guid: 3849432aca95e2d4aa166bcf48388dbf, type: 2}
   - {fileID: 11400000, guid: af13b10c61a88044b98e43d513a40518, type: 2}
   - {fileID: 11400000, guid: 681a2998617301845b1de7c6950d6341, type: 2}
   - {fileID: 11400000, guid: 2130de873a449234da4aec7b032f21b0, type: 2}
@@ -36,8 +35,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8c36f898886508048b2339b8c6648ab9, type: 2}
   - {fileID: 11400000, guid: 9c286d1a436a5f04787c61625beb258f, type: 2}
   BackGroundTiles: []
-  FilledTiles:
-  - {fileID: 11400000, guid: 3849432aca95e2d4aa166bcf48388dbf, type: 2}
+  FilledTiles: []
   EdgeUpTiles: []
   EdgeDownTiles: []
   EdgeLeftTiles: []

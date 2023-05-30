@@ -7,15 +7,15 @@ public class FollowCamera : MonoBehaviour
 
     [SerializeField] private Vector3 playerPosition;
     [SerializeField] private Vector3 basePosition;
-    
-    void Start()
+
+    private void Start()
     {
         playerBase = FindObjectOfType<HealthBase>().gameObject;
         basePosition = playerBase.transform.position;
         basePosition.Set(basePosition.x, basePosition.y, transform.position.z);
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         SetPlayer();
         Follow();
@@ -23,7 +23,7 @@ public class FollowCamera : MonoBehaviour
 
     private void Follow()
     {
-        if(player == null)
+        if (player == null)
         {
             transform.position = Vector3.Lerp(transform.position, basePosition, 0.125f);
         }

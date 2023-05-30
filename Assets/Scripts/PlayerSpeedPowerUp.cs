@@ -7,6 +7,7 @@ public class PlayerSpeedPowerUp : MonoBehaviour
     public float powerUpDuration = 5f;
 
     private static bool powerUpActivated = false;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && !powerUpActivated)
@@ -25,10 +26,9 @@ public class PlayerSpeedPowerUp : MonoBehaviour
                 //Destroy(gameObject);
             }
         }
-    } 
+    }
 
-
-    IEnumerator ResetSpeed(PlayerMovement playerMovement, float duration)
+    private IEnumerator ResetSpeed(PlayerMovement playerMovement, float duration)
     {
         yield return new WaitForSeconds(duration);
         playerMovement.MoveSpeedReset();
@@ -42,34 +42,33 @@ public class PlayerSpeedPowerUp : MonoBehaviour
 
     public void DisablePowerUp()
     {
-        Collider2D collider  = GetComponent<Collider2D>();
-        if(collider != null)
+        Collider2D collider = GetComponent<Collider2D>();
+        if (collider != null)
         {
             Debug.Log("PowerUp");
             collider.enabled = false;
-            
         }
 
         Renderer renderer = GetComponent<Renderer>();
-        if(renderer != null)
+        if (renderer != null)
         {
-            renderer.enabled = false;     
+            renderer.enabled = false;
         }
     }
+
     public void EnablePowerUp()
     {
         Collider2D collider = GetComponent<Collider2D>();
-        if(collider != null)
+        if (collider != null)
         {
             Debug.Log("No Power Up");
             collider.enabled = true;
         }
 
         Renderer renderer = GetComponent<Renderer>();
-        if(renderer != null)
+        if (renderer != null)
         {
             renderer.enabled = true;
         }
-        
     }
 }
