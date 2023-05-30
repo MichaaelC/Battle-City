@@ -147,6 +147,7 @@ MonoBehaviour:
   timer: 5
   health: 1
   damage: 1
+  enemyBulletPrefab: {fileID: 5680987914811285266, guid: 5473f96e01acde948a5d9fa7b3b971ab, type: 3}
   explosionRadius: {x: 0.55, y: 0.55}
 --- !u!50 &-5959485842013822584
 Rigidbody2D:

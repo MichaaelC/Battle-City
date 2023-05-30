@@ -12,7 +12,7 @@ public class EnemySpawn : MonoBehaviour
     private bool isStart = false;
     public float spawnTimer = 0f;
 
-    public int spawnLimit = 2;
+    public int spawnLimit = 5;
     private bool isSpawning = false;
     public List<GameObject> spawnCount;
     private WaitForSeconds spawnDelay;

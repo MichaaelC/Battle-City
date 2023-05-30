@@ -8,13 +8,15 @@ public class PlayerBullet : MonoBehaviour
     [SerializeField] private float timer = 5f;
     [SerializeField] private int health = 1;
     [SerializeField] private int damage = 1;
+    [SerializeField] private GameObject explosion;
+   
 
     [SerializeField] private Vector2 explosionRadius = new Vector2(1f, 1f);
     private List<Collider2D> explosionHits;
 
     void Start()
     {
-        Destroy(gameObject, timer);
+        Invoke("Explode", timer);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -44,7 +46,7 @@ public class PlayerBullet : MonoBehaviour
             }
             else if (item.GetComponent<HealthIndestructable>() || item.GetComponent<Wall>())
             {
-                Destroy(gameObject);
+                Explode();
             } 
         }
         explosionHits.Clear();
@@ -55,10 +57,17 @@ public class PlayerBullet : MonoBehaviour
         health--;
         if (health <= 0)
         {
-            Destroy(this.gameObject);
+            Explode();
         }
     }
 
+    public void Explode()
+    {
+        Debug.Log("asd");
+        GameObject bulletExplosion = Instantiate(explosion, transform, true);
+        Debug.Log(bulletExplosion);
+        Destroy(this.gameObject);
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
