@@ -4,9 +4,9 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
     public GameObject bulletPrefabs;
-    public float fireRate = 1f;
+    public float fireRate = 0.8f;
+    public float bulletSpeed = 5f;
     public bool isReadyToFire = true;
-    public float bulletSpeed = 10f;
 
     private WaitForSeconds wait;
 
@@ -24,16 +24,16 @@ public class PlayerShoot : MonoBehaviour
             switch (dir)
             {
                 case Direction.up:
-                    bullet.GetComponent<Rigidbody2D>().velocity = Vector2.up * bulletSpeed;
+                    bullet.GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
                     break;
                 case Direction.down:
-                    bullet.GetComponent<Rigidbody2D>().velocity = Vector2.down * bulletSpeed;
+                    bullet.GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
                     break;
                 case Direction.left:
-                    bullet.GetComponent<Rigidbody2D>().velocity = Vector2.left * bulletSpeed;
+                    bullet.GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
                     break;
                 case Direction.right:
-                    bullet.GetComponent<Rigidbody2D>().velocity = Vector2.right * bulletSpeed;
+                    bullet.GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
                     break;
             }
 

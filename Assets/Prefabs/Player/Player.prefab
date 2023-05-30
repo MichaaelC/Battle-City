@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 9115821976525844533}
   - component: {fileID: 5714009226485046496}
   - component: {fileID: 1004931728007369985}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007905245, y: -0.0100598335}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -160,7 +160,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7367704, y: 0.77267694}
+  m_Size: {x: 0.62, y: 0.72}
   m_EdgeRadius: 0
 --- !u!114 &5662884048135454372
 MonoBehaviour:

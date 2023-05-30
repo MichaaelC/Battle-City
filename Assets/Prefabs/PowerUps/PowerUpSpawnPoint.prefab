@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 422061969883361049}
   - component: {fileID: 1223587076411642988}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PowerUpSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

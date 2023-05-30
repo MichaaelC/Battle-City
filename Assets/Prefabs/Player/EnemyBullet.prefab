@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5811383926714837567}
   - component: {fileID: 8554493351469219354}
-  - component: {fileID: 505135786357558781}
   - component: {fileID: 6365069982270267495}
+  - component: {fileID: 505135786357558781}
   - component: {fileID: -5959485842013822584}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EnemyBullet
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 82468b9c6d0fc3c47a4d620280fb2c32, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.18396229, b: 0.27522036, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -87,21 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &505135786357558781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3886228028866477266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 622a648fd5258364a93f5d6feb83baf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 5
-  damage: 1
-  health: 1
 --- !u!61 &6365069982270267495
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -145,8 +130,24 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.28}
+  m_Size: {x: 0.15, y: 0.26}
   m_EdgeRadius: 0
+--- !u!114 &505135786357558781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886228028866477266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 622a648fd5258364a93f5d6feb83baf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 5
+  health: 1
+  damage: 1
+  explosionRadius: {x: 0.55, y: 0.55}
 --- !u!50 &-5959485842013822584
 Rigidbody2D:
   serializedVersion: 4
@@ -173,4 +174,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4

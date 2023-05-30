@@ -56,6 +56,7 @@ public class EnemySpawn : MonoBehaviour
         yield return spawnDelay;
         isSpawning = false;
     }
+
     public void SpawnEnemy()
     {
         if(spawnCount.Count <= spawnLimit)

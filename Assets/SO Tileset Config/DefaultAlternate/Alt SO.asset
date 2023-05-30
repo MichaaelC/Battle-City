@@ -14,13 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AllInputTiles:
   - {fileID: 11400000, guid: 7bdf48a2c6edacc4b8f8a77f9bac1c53, type: 2}
-  - {fileID: 11400000, guid: d89262a2bc8863640bd29ec61cf1a458, type: 2}
+  - {fileID: 11400000, guid: 04357d6987b314348b7f1ab619ae019a, type: 2}
+  - {fileID: 11400000, guid: c2bdcae5dcc28a64987ac493bd0730c7, type: 2}
+  - {fileID: 11400000, guid: da088f8d8047db44fa23953ddbb8807f, type: 2}
+  - {fileID: 11400000, guid: de58f665bcb150c4fae9119c3c4cbff2, type: 2}
   - {fileID: 11400000, guid: 8a1cdedfd11d2c944b03c44e66a005bb, type: 2}
-  - {fileID: 11400000, guid: 4f233b68aca0fe04eade3a5971bc2b5c, type: 2}
-  - {fileID: 11400000, guid: d8ca74b21a1a2934abf06d6e9c4c0dac, type: 2}
-  - {fileID: 11400000, guid: aec96424c00417b4abebc219a174f633, type: 2}
-  - {fileID: 11400000, guid: 23bb3ec4583957a4db5dc86083ca4123, type: 2}
-  - {fileID: 11400000, guid: a8e8d0b11aa57014fa1732bbfbea2d1f, type: 2}
+  - {fileID: 11400000, guid: 04e9798551958cf43ace2901d9ddd55f, type: 2}
   - {fileID: 11400000, guid: f26022599e47095418a779ea38eed15f, type: 2}
   - {fileID: 11400000, guid: 93c1ec98b5e2f3b46ad848379b2e8aef, type: 2}
   - {fileID: 11400000, guid: 83b4f7213be013c49bbec3be8c1ff050, type: 2}
@@ -31,18 +30,28 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b0bfd36c9390de741848552e152b56d7, type: 2}
   - {fileID: 11400000, guid: f357ec64c00cb134d89e7189232a5aec, type: 2}
   - {fileID: 11400000, guid: 274b7a857902deb40a99d79e4802f098, type: 2}
+  - {fileID: 11400000, guid: a79a56677e1212d47a183be9faa98bb9, type: 2}
+  - {fileID: 11400000, guid: d671cb7ae16e2e24bb57d76d08acae17, type: 2}
+  - {fileID: 11400000, guid: b026cfcfebeb5d04cb0fdab109bd3bf0, type: 2}
+  - {fileID: 11400000, guid: ec494379d99e6ee49a767685ec120abd, type: 2}
+  - {fileID: 11400000, guid: 21481e26d24bd7b4dab617f189cfa750, type: 2}
+  - {fileID: 11400000, guid: 128cee9df2b6dc54d9232be27e67a75c, type: 2}
+  - {fileID: 11400000, guid: ce968351a98b4634ebe98100bfd7cd5c, type: 2}
+  - {fileID: 11400000, guid: 36ce276ce5f19a245b9a8eebb30fe77b, type: 2}
+  - {fileID: 11400000, guid: e257ae8a73c611544a27deaa43bd0509, type: 2}
   UniqueInputTiles: []
   ForeGroundTiles:
   - {fileID: 11400000, guid: 7bdf48a2c6edacc4b8f8a77f9bac1c53, type: 2}
-  - {fileID: 11400000, guid: d89262a2bc8863640bd29ec61cf1a458, type: 2}
+  - {fileID: 11400000, guid: d8ca74b21a1a2934abf06d6e9c4c0dac, type: 2}
+  - {fileID: 11400000, guid: 04357d6987b314348b7f1ab619ae019a, type: 2}
+  - {fileID: 11400000, guid: c2bdcae5dcc28a64987ac493bd0730c7, type: 2}
+  - {fileID: 11400000, guid: da088f8d8047db44fa23953ddbb8807f, type: 2}
+  - {fileID: 11400000, guid: de58f665bcb150c4fae9119c3c4cbff2, type: 2}
   - {fileID: 11400000, guid: 8a1cdedfd11d2c944b03c44e66a005bb, type: 2}
-  - {fileID: 11400000, guid: 4f233b68aca0fe04eade3a5971bc2b5c, type: 2}
+  - {fileID: 11400000, guid: e257ae8a73c611544a27deaa43bd0509, type: 2}
   BackGroundTiles: []
   FilledTiles:
   - {fileID: 11400000, guid: d8ca74b21a1a2934abf06d6e9c4c0dac, type: 2}
-  - {fileID: 11400000, guid: aec96424c00417b4abebc219a174f633, type: 2}
-  - {fileID: 11400000, guid: 23bb3ec4583957a4db5dc86083ca4123, type: 2}
-  - {fileID: 11400000, guid: a8e8d0b11aa57014fa1732bbfbea2d1f, type: 2}
   EdgeUpTiles: []
   EdgeDownTiles: []
   EdgeLeftTiles: []
@@ -58,7 +67,7 @@ MonoBehaviour:
   CornerULDRTiles: []
   CornerURDLTiles: []
   FourFaceTiles:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 04e9798551958cf43ace2901d9ddd55f, type: 2}
   VerticalTiles:
   - {fileID: 11400000, guid: f26022599e47095418a779ea38eed15f, type: 2}
   HorizontalTiles:
@@ -79,7 +88,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f357ec64c00cb134d89e7189232a5aec, type: 2}
   ThreeFaceRightTiles:
   - {fileID: 11400000, guid: 274b7a857902deb40a99d79e4802f098, type: 2}
-  OneFaceUpTiles: []
-  OneFaceDownTiles: []
-  OneFaceLeftTiles: []
-  OneFaceRightTiles: []
+  OneFaceUpTiles:
+  - {fileID: 11400000, guid: a79a56677e1212d47a183be9faa98bb9, type: 2}
+  - {fileID: 11400000, guid: d671cb7ae16e2e24bb57d76d08acae17, type: 2}
+  OneFaceDownTiles:
+  - {fileID: 11400000, guid: b026cfcfebeb5d04cb0fdab109bd3bf0, type: 2}
+  - {fileID: 11400000, guid: ec494379d99e6ee49a767685ec120abd, type: 2}
+  OneFaceLeftTiles:
+  - {fileID: 11400000, guid: 21481e26d24bd7b4dab617f189cfa750, type: 2}
+  - {fileID: 11400000, guid: 128cee9df2b6dc54d9232be27e67a75c, type: 2}
+  OneFaceRightTiles:
+  - {fileID: 11400000, guid: ce968351a98b4634ebe98100bfd7cd5c, type: 2}
+  - {fileID: 11400000, guid: 36ce276ce5f19a245b9a8eebb30fe77b, type: 2}

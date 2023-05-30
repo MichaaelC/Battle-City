@@ -13,12 +13,12 @@ GameObject:
   - component: {fileID: 3871651689116856347}
   - component: {fileID: 3767523546113036145}
   - component: {fileID: 7214880873164942028}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MudWalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2725548852493162779
 Transform:
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 5d5c4b40d1b837c4f9c4d1ac79de8dc3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bb67e9bf3a582e1418046f359398e806, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2577352875084172991}
   - component: {fileID: 4201715807449090261}
   - component: {fileID: 1948743874007574245}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MoveSpeedPowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 392cfccfecd983b4e8f21d951ef08dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMultiplier: 3
+  speedMultiplier: 1.5
   powerUpDuration: 2
 --- !u!61 &4201715807449090261
 BoxCollider2D:
@@ -130,7 +130,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.15807691}

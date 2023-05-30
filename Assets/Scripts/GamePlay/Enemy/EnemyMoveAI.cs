@@ -3,66 +3,88 @@ using UnityEngine;
 
 public class EnemyMoveAI : MonoBehaviour
 {
-	public float movementSpeed = 5.0f; 
-	public float minChangeDirectionTime = 1.0f; 
-	public float maxChangeDirectionTime = 3.0f; 
-	private Rigidbody2D rb; 
-	private Vector2 movementDirection; 
-	private float timeToChangeDirection; 
-	private float moveSpeedOriginal;
-	private bool hitEnemy;
-	private float raycastDistance = 4f;
+	public float movementSpeed = 5.0f;
 
-	private bool isFrozen = false;
+    [SerializeField] private float minChangeDirectionTime = 0.5f;
+    [SerializeField] private float maxChangeDirectionTime = 3.0f; 
+	[SerializeField] private float raycastDistance = 1f;
+
+	[SerializeField] private bool canRotate = true;
+	[SerializeField] private bool canMove = true;
+
+	private Rigidbody2D rb;
+	private Collider2D col;
+	private Vector2 movementDirection; 
 	private Vector3 originalMovement;
+	private RaycastHit2D hit;
+	private LayerMask foreGroundLayerMask;
+
+	private float angle;
+    private float moveSpeedOriginal;
+	private bool isFrozen = false;
 
 	private WaitForSeconds wait;
-	void Start()
-	{   
-		rb = GetComponent<Rigidbody2D>();
-		timeToChangeDirection = Time.time + Random.Range(minChangeDirectionTime, maxChangeDirectionTime);       
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<Collider2D>();
+
+        foreGroundLayerMask = LayerMask.GetMask("Foreground");
 		movementDirection = Vector2.down;
 		moveSpeedOriginal = movementSpeed;
+
+        wait = new(1f);
+    }
+
+    private void Start()
+	{   
 		originalMovement = rb.velocity;
-		wait = new(1f);
-		StartCoroutine(ChangeDirection());
+        movementDirection = RandomDirection();
+        StartCoroutine(ChangeDirection());
 	}
 
-	void Update()
-	{
-		RaycastHit2D hit = Physics2D.Raycast(transform.position, movementDirection, raycastDistance, LayerMask.GetMask("Obstacle"));
-		
-		if (hit.collider != null)
+	private void Update()
+    {
+		col.enabled = false;
+        hit = Physics2D.Raycast(transform.position, movementDirection, raycastDistance, foreGroundLayerMask);
+		col.enabled = true;
+
+		if(hit.collider != null)
 		{
-			movementDirection = RandomDirection();
-			hitEnemy = true;
+			CheckFront(hit);
 		}
 		else
 		{
-			hitEnemy = false;
-		}
+			CanMoveAndRotate(true, true);
+        }
+    }
 
-		if (!isFrozen)
+	private void CheckFront(RaycastHit2D hit)
+    {
+		if(hit.collider.gameObject.GetComponent<HealthBase>() != null)
 		{
-			RandomDirection();
+			CanMoveAndRotate(false, false);
 		}
-	}
+		else if (
+			hit.collider.gameObject.GetComponent<HealthDestructable>() != null ||
+			hit.collider.gameObject.GetComponent<HealthIndestructable>() != null ||
+			hit.collider.gameObject.GetComponent<HealthPlayer>() != null ||
+			hit.collider.gameObject.GetComponent<HealthEnemy>() != null)
+		{
+			CanMoveAndRotate(false, true);
+		}
+        else
+        {
+			CanMoveAndRotate(true, true);
+        }
+    }
 
-	void FixedUpdate()
+    void FixedUpdate()
 	{
-
-		if (!hitEnemy)
-		{
-			rb.velocity = movementDirection * movementSpeed;
-		}
-		else
-		{
-			rb.velocity = Vector2.zero;
-		}
-
-		float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg - 90f;
+		rb.velocity = movementDirection * movementSpeed;		
+		angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg - 90f;
 		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-		//rb.velocity = movementDirection * movementSpeed;
 	}
 
 	private IEnumerator ChangeDirection()
@@ -70,7 +92,6 @@ public class EnemyMoveAI : MonoBehaviour
 		while (true)
 		{
 			yield return wait;
-            timeToChangeDirection = Time.time + Random.Range(minChangeDirectionTime, maxChangeDirectionTime);
             movementDirection = RandomDirection();
 
 			wait = new(Random.Range(minChangeDirectionTime, maxChangeDirectionTime));
@@ -79,20 +100,24 @@ public class EnemyMoveAI : MonoBehaviour
 
 	private Vector2 RandomDirection()
 	{
-		int rand = Random.Range(0, 4);
-		switch (rand)
+		if (canRotate)
 		{
-			case 0:
-				return Vector2.down;
-			case 1:
-				return Vector2.up;
-			case 2:
-				return Vector2.left;
-			case 3:
-				return Vector2.right;
-			default:
-				return Vector2.zero;
+			int rand = Random.Range(0, 4);
+			switch (rand)
+			{
+				case 0:
+					return Vector2.down;
+				case 1:
+					return Vector2.up;
+				case 2:
+					return Vector2.left;
+				case 3:
+					return Vector2.right;
+				default:
+					return movementDirection;
+			}
 		}
+		return movementDirection;
 	}
 
 	public void MoveSpeedRestart()
@@ -116,8 +141,19 @@ public class EnemyMoveAI : MonoBehaviour
 		rb.velocity = originalMovement;
 	}
 
-	public void DestroyEnemy()
+    private void CanMoveAndRotate(bool move, bool rotate)
+    {
+        canMove = move;
+        canRotate = rotate;
+    }
+
+    public void DestroyEnemy()
 	{
 		Destroy(gameObject);
 	}
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(transform.position, (Vector2) transform.position + movementDirection.normalized * raycastDistance);
+    }
 }
