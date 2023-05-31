@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PowerUpArmorUp : MonoBehaviour
 {
-    [SerializeField] int additionalArmor = 1;
+    [SerializeField] private int additionalArmor = 1;
     private Health pickerHealth;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -14,7 +14,7 @@ public class PowerUpArmorUp : MonoBehaviour
                 pickerHealth.ModifyHealth(additionalArmor);
             }
             Destroy(this.gameObject);
-            Debug.Log("PowerUp - Speed");
+            Debug.Log("PowerUp - Armor Up");
         }
     }
 }

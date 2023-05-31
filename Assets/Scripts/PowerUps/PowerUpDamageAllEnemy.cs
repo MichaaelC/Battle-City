@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PowerUpDamageAllEnemy : MonoBehaviour
 {
-    [SerializeField] int damage = 5;
+    [SerializeField] private int damage = 5;
     private HealthEnemy[] enemies;
 
     private void OnTriggerEnter2D(Collider2D collision)

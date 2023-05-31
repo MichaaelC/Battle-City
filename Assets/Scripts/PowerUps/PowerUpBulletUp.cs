@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PowerUpBulletUp : MonoBehaviour
 {
-    [SerializeField] private float additionalFireRate= 1f;
+    [SerializeField] private float additionalFireRate = 1f;
     [SerializeField] private float additionalSpeed = 1f;
     [SerializeField] private int additionalPower = 1;
     [SerializeField] private int additionalHealth = 1;

@@ -21,10 +21,10 @@ public class PowerUpSpawner : MonoBehaviour
         InvokeRepeating(nameof(SpawnPowerUp), 0f, spawnDelay);
     }
 
-    void SpawnPowerUp()
+    private void SpawnPowerUp()
     {
         CheckPowerUps();
-        if(currentPowerUps.Count >= maxPowerUps)
+        if (currentPowerUps.Count >= maxPowerUps)
         {
             return;
         }
@@ -35,7 +35,7 @@ public class PowerUpSpawner : MonoBehaviour
         currentPowerUps.Add(Instantiate(powerUpPrefabs[randomIndex], randomPosition, Quaternion.identity));
     }
 
-    Vector2 GenerateRandomPosition()
+    private Vector2 GenerateRandomPosition()
     {
         float x = Random.Range(minX, maxX);
         float y = Random.Range(minY, maxY);
@@ -44,15 +44,15 @@ public class PowerUpSpawner : MonoBehaviour
 
     private void CheckPowerUps()
     {
-        foreach(var item in currentPowerUps)
+        foreach (var item in currentPowerUps)
         {
-            if(item != null)
+            if (item != null)
             {
                 temp.Add(item);
             }
         }
         currentPowerUps.Clear();
-        if(temp.Count > 0)
+        if (temp.Count > 0)
         {
             currentPowerUps.AddRange(temp);
         }
