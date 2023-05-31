@@ -3,11 +3,14 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-    public GameObject bulletPrefabs;
-    public float fireRate = 0.8f;
-    public float bulletSpeed = 5f;
-    public bool isReadyToFire = true;
+    [SerializeField] private GameObject bulletPrefabs;
+    [SerializeField] private float fireRate = 0.8f;
+    [SerializeField] private float bulletSpeed = 5f;
+    [SerializeField] private int bulletPower = 1;
+    [SerializeField] private int bulletHealth = 1;
+    [SerializeField] private bool isReadyToFire = true;
 
+    private GameObject bullet;
     private WaitForSeconds wait;
 
     private void Start()
@@ -19,7 +22,8 @@ public class PlayerShoot : MonoBehaviour
     {
         if (isReadyToFire)
         {
-            var bullet = Instantiate(bulletPrefabs, transform.position, transform.rotation);
+            bullet = Instantiate(bulletPrefabs, transform.position, transform.rotation);
+            bullet.GetComponent<PlayerBullet>().ModifyBullet(bulletPower, bulletHealth);
 
             switch (dir)
             {
@@ -50,5 +54,13 @@ public class PlayerShoot : MonoBehaviour
         yield return wait;
         isReadyToFire = true;
         yield break;
+    }
+
+    public void ModifyShootProperties(float fireRateValue, float bulletSpeedValue, int bulletPowerValue, int bulletHealthValue)
+    {
+        this.fireRate *= fireRateValue;
+        this.bulletSpeed *= bulletSpeedValue;
+        this.bulletHealth += bulletHealthValue;
+        this.bulletPower += bulletPowerValue;
     }
 }

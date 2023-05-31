@@ -22,14 +22,9 @@ public class PlayerMovement : MonoBehaviour
         moveSpeedOriginal = moveSpeed;
     }
 
-    public void IncreaseSpeed(float multiplier)
+    public void ModifySpeed(float multiplier)
     {
         moveSpeed *= multiplier;
-    }
-
-    public void ResetSpeed(float multiplier)
-    {
-        moveSpeed = multiplier + 1;
     }
 
     private void FixedUpdate()

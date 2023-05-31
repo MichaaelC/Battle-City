@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 1242570535799605198}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -148,7 +148,7 @@ MonoBehaviour:
   health: 1
   damage: 1
   explosionPrefab: {fileID: 5680987914811285266, guid: 5473f96e01acde948a5d9fa7b3b971ab, type: 3}
-  explosionRadius: {x: 0.55, y: 0.55}
+  explosionRadius: {x: 0.3, y: 0.3}
 --- !u!50 &8295169408246159469
 Rigidbody2D:
   serializedVersion: 4

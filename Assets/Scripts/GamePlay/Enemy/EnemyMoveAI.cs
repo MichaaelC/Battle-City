@@ -15,13 +15,11 @@ public class EnemyMoveAI : MonoBehaviour
     private Rigidbody2D rb;
     private Collider2D col;
     private Vector2 movementDirection;
-    private Vector3 originalMovement;
     private RaycastHit2D hit;
     private LayerMask foreGroundLayerMask;
 
     private float angle;
     private float moveSpeedOriginal;
-    private bool isFrozen = false;
 
     private WaitForSeconds wait;
 
@@ -39,7 +37,6 @@ public class EnemyMoveAI : MonoBehaviour
 
     private void Start()
     {
-        originalMovement = rb.velocity;
         movementDirection = RandomDirection();
         StartCoroutine(ChangeDirection());
     }
@@ -129,20 +126,9 @@ public class EnemyMoveAI : MonoBehaviour
         movementSpeed = moveSpeedOriginal;
     }
 
-    public void Freeze(float duration)
+    public void ModifySpeed(float value)
     {
-        if (!isFrozen)
-        {
-            isFrozen = true;
-            rb.velocity = Vector3.zero;
-            Invoke(nameof(ResumeAI), duration);
-        }
-    }
-
-    private void ResumeAI()
-    {
-        isFrozen = false;
-        rb.velocity = originalMovement;
+        movementSpeed *= value;
     }
 
     private void CanMoveAndRotate(bool move, bool rotate)
