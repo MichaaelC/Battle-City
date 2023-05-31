@@ -7,7 +7,7 @@
       "dependencies": {
         "com.unity.editorcoroutines": "1.0.0"
       },
-      "hash": "bef7d7ad4c219597e0cf4d28ff6719ff1875121c"
+      "hash": "cf0d016dd29f055b0c5a2cc947fbde21d543edbb"
     },
     "com.unity.2d.animation": {
       "version": "9.0.2",
@@ -153,15 +153,6 @@
         "com.unity.2d.tilemap": "1.0.0",
         "com.unity.2d.tilemap.extras": "3.1.0"
       }
-    },
-    "com.unity.ide.rider": {
-      "version": "3.0.21",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.ext.nunit": "1.0.6"
-      },
-      "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
       "version": "2.0.18",
