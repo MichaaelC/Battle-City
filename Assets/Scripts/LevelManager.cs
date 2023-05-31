@@ -4,7 +4,7 @@ public class LevelManager : MonoBehaviour
 {
     public GameObject player;
     public GameObject playerBase;
-    public GameObject levelCompleteUI;
+    public InGameUI ui;
     public int playerLives = 3;
     public bool isEnabled = false;
 
@@ -19,6 +19,7 @@ public class LevelManager : MonoBehaviour
         playerBase = FindObjectOfType<HealthBase>().gameObject;
         player = playerSpawn.player;
         enemySpawn = GetComponentsInChildren<EnemySpawn>();
+        ui = GetComponentInChildren<InGameUI>();
         StartSpawn();
     }
 
@@ -63,7 +64,7 @@ public class LevelManager : MonoBehaviour
     {
         if (spawnLimit <= 0 && CheckSpawnsIfFinished())
         {
-            levelCompleteUI.SetActive(true);
+            ui.ShowContinueGameScreen();
         }
         else if (spawnLimit <= 0)
         {
@@ -95,9 +96,8 @@ public class LevelManager : MonoBehaviour
         return value;
     }
 
-    private static void GameOver()
+    private void GameOver()
     {
-        InGameUI ui = FindObjectOfType<InGameUI>();
         ui.ShowGameOverScreen();
     }
 }

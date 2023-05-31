@@ -13,8 +13,8 @@ public class PowerUpArmorUp : MonoBehaviour
             {
                 pickerHealth.ModifyHealth(additionalArmor);
             }
-            Destroy(this.gameObject);
             Debug.Log("PowerUp - Armor Up");
+            Destroy(this.gameObject);
         }
     }
 }

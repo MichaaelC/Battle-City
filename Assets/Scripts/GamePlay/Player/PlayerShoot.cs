@@ -6,8 +6,8 @@ public class PlayerShoot : MonoBehaviour
     [SerializeField] private GameObject bulletPrefabs;
     [SerializeField] private float fireRate = 0.8f;
     [SerializeField] private float bulletSpeed = 5f;
-    [SerializeField] private int bulletPower = 1;
-    [SerializeField] private int bulletHealth = 1;
+    [SerializeField] private int additionalBulletPower = 0;
+    [SerializeField] private int additionalBulletHealth = 0;
     [SerializeField] private bool isReadyToFire = true;
 
     private GameObject bullet;
@@ -23,7 +23,7 @@ public class PlayerShoot : MonoBehaviour
         if (isReadyToFire)
         {
             bullet = Instantiate(bulletPrefabs, transform.position, transform.rotation);
-            bullet.GetComponent<PlayerBullet>().ModifyBullet(bulletPower, bulletHealth);
+            bullet.GetComponent<PlayerBullet>().ModifyBullet(additionalBulletPower, additionalBulletHealth);
 
             switch (dir)
             {
@@ -60,7 +60,7 @@ public class PlayerShoot : MonoBehaviour
     {
         this.fireRate *= fireRateValue;
         this.bulletSpeed *= bulletSpeedValue;
-        this.bulletHealth += bulletHealthValue;
-        this.bulletPower += bulletPowerValue;
+        this.additionalBulletHealth += bulletHealthValue;
+        this.additionalBulletPower += bulletPowerValue;
     }
 }

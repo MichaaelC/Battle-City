@@ -37,7 +37,7 @@ public class EnemyBullet : MonoBehaviour
         }
         else if (collision.GetComponent<PlayerBullet>())
         {
-            collision.GetComponent<PlayerBullet>().Hit();
+            collision.GetComponent<PlayerBullet>().Hit(damage);
             Hit();
         }
         else if (collision.GetComponent<HealthIndestructable>() || collision.GetComponent<Wall>())
@@ -49,6 +49,15 @@ public class EnemyBullet : MonoBehaviour
     public void Hit()
     {
         health--;
+        if (health <= 0)
+        {
+            Explode();
+        }
+    }
+
+    public void Hit(int value)
+    {
+        health -= value;
         if (health <= 0)
         {
             Explode();
@@ -74,7 +83,7 @@ public class EnemyBullet : MonoBehaviour
             }
             else if (item.GetComponent<PlayerBullet>())
             {
-                item.GetComponent<PlayerBullet>().Hit();
+                item.GetComponent<PlayerBullet>().Hit(damage);
             }
         }
         explosionHits.Clear();

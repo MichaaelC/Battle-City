@@ -5,10 +5,11 @@ public class EnemyShoot : MonoBehaviour
 {
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private float bulletSpeed = 5f;
-    [SerializeField] private int bulletPower = 1;
-    [SerializeField] private int bulletHealth = 1;
+    [SerializeField] private int additionalBulletPower = 0;
+    [SerializeField] private int additionalBulletHealth = 0;
     [SerializeField] private float minDelay = 0.8f;
     [SerializeField] private float maxDelay = 4f;
+    
     private bool canShoot = true;
 
     private Rigidbody2D enemyRb;
@@ -38,7 +39,7 @@ public class EnemyShoot : MonoBehaviour
     private void Fire()
     {
         bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
-        bullet.GetComponent<EnemyBullet>().ModifyBullet(bulletPower, bulletHealth);
+        bullet.GetComponent<EnemyBullet>().ModifyBullet(additionalBulletPower, additionalBulletHealth);
         enemyRb = bullet.GetComponent<Rigidbody2D>();
         enemyRb.AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
     }

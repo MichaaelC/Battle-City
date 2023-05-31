@@ -31,13 +31,13 @@ public class PlayerBullet : MonoBehaviour
         }
         else if (collision.GetComponent<HealthEnemy>())
         {
-            Hit();
+            Hit(3);
             collision.GetComponent<HealthEnemy>().GetDamage(damage);
         }
         else if (collision.GetComponent<EnemyBullet>())
         {
             Hit();
-            collision.GetComponent<EnemyBullet>().Hit();
+            collision.GetComponent<EnemyBullet>().Hit(damage);
         }
         else if (collision.GetComponent<HealthIndestructable>() || collision.GetComponent<Wall>())
         {
@@ -48,6 +48,15 @@ public class PlayerBullet : MonoBehaviour
     public void Hit()
     {
         health--;
+        if (health <= 0)
+        {
+            Explode();
+        }
+    }
+
+    public void Hit(int value)
+    {
+        health -= value;
         if (health <= 0)
         {
             Explode();
@@ -73,7 +82,7 @@ public class PlayerBullet : MonoBehaviour
             }
             else if (item.GetComponent<EnemyBullet>())
             {
-                item.GetComponent<EnemyBullet>().Hit();
+                item.GetComponent<EnemyBullet>().Hit(damage);
             }
         }
         explosionHits.Clear();
