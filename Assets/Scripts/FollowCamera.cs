@@ -1,21 +1,33 @@
 using UnityEngine;
+using Cinemachine;
+using System.Collections;
+using UnityEngine.PlayerLoop;
 
 public class FollowCamera : MonoBehaviour
 {
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject playerBase;
-
     [SerializeField] private Vector3 playerPosition;
     [SerializeField] private Vector3 basePosition;
-    
-    void Start()
+
+    private CinemachineVirtualCamera cam;
+    private WaitForSeconds wait;
+
+    private void Awake()
+    {
+        cam = GetComponent<CinemachineVirtualCamera>();
+        wait = new WaitForSeconds(0.1f);
+    }
+
+    private void Start()
     {
         playerBase = FindObjectOfType<HealthBase>().gameObject;
         basePosition = playerBase.transform.position;
         basePosition.Set(basePosition.x, basePosition.y, transform.position.z);
+        //StartCoroutine(CFollow());
     }
 
-    void FixedUpdate()
+    private void Update()
     {
         SetPlayer();
         Follow();
@@ -23,22 +35,32 @@ public class FollowCamera : MonoBehaviour
 
     private void Follow()
     {
-        if(player == null)
+        if (player == null)
         {
-            transform.position = Vector3.Lerp(transform.position, basePosition, 0.125f);
+            cam.Follow = playerBase.transform;
         }
         else
         {
-            playerPosition.Set(player.transform.position.x, player.transform.position.y, transform.position.z);
-            transform.position = Vector3.Lerp(transform.position, playerPosition, 0.125f);
+            cam.Follow = player.transform;
+            
         }
     }
 
     private void SetPlayer()
     {
-        if (player == null && FindAnyObjectByType<HealthPlayer>())
+        if (player == null)
         {
-            player = FindAnyObjectByType<HealthPlayer>().gameObject;
+            try
+            {
+                GameObject temp = FindAnyObjectByType<HealthPlayer>().gameObject;
+                if (temp != null)
+                    player = temp;
+            }
+            catch
+            {
+                Debug.Log("No Player");
+            }
+            
         }
     }
 }

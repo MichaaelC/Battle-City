@@ -3,12 +3,17 @@ using UnityEngine;
 
 public class EnemyShoot : MonoBehaviour
 {
-    public GameObject bulletPrefab;
-    public float bulletSpeed = 5f;
-    public float minDelay = 0.8f;
-    public float maxDelay = 4f;
-    public bool canShoot = true;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private float bulletSpeed = 5f;
+    [SerializeField] private int additionalBulletPower = 0;
+    [SerializeField] private int additionalBulletHealth = 0;
+    [SerializeField] private float minDelay = 0.8f;
+    [SerializeField] private float maxDelay = 4f;
+    
+    private bool canShoot = true;
 
+    private Rigidbody2D enemyRb;
+    private GameObject bullet;
     private WaitForSeconds wait;
 
     private void Awake()
@@ -31,10 +36,11 @@ public class EnemyShoot : MonoBehaviour
         }
     }
 
-    void Fire()
+    private void Fire()
     {
-        GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
+        bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+        bullet.GetComponent<EnemyBullet>().ModifyBullet(additionalBulletPower, additionalBulletHealth);
+        enemyRb = bullet.GetComponent<Rigidbody2D>();
+        enemyRb.AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
     }
 }

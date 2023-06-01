@@ -7,50 +7,42 @@ public class EnemyBullet : MonoBehaviour
     [SerializeField] private float timer = 5f;
     [SerializeField] private int health = 1;
     [SerializeField] private int damage = 1;
-    [SerializeField] private GameObject enemyBulletPrefab;
+    [SerializeField] private GameObject explosionPrefab;
 
-    [SerializeField] private Vector2 explosionRadius = new Vector2(1f, 1f);
+    [SerializeField] private Vector2 explosionRadius = new (1f, 1f);
     private List<Collider2D> explosionHits;
 
-    void Start()
+    private void Start()
     {
-        Invoke("Explode",  timer);
+        Invoke(nameof(Explode), timer);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        explosionHits = Physics2D.OverlapBoxAll(transform.position, explosionRadius, 0f).ToList();
-
-        foreach (var item in explosionHits)
+        if (collision.GetComponent<HealthBase>())
         {
-            if (item.gameObject.GetComponent<HealthBase>())
-            {
-                item.GetComponent<HealthBase>().GetDamage(damage);
-                Hit();
-            }
-            else if (item.GetComponent<HealthDestructable>())
-            {
-                item.GetComponent<HealthDestructable>().GetDamage(damage);
-                Hit();
-            }
-
-            else if (item.GetComponent<HealthPlayer>())
-            {
-                item.GetComponent<HealthPlayer>().GetDamage(damage);
-                Hit();
-            }
-
-            else if (item.GetComponent<PlayerBullet>())
-            {
-                item.GetComponent<PlayerBullet>().Hit();
-            }
-
-            else if (item.GetComponent<HealthIndestructable>() || item.GetComponent<Wall>())
-            {
-                Explode();
-            }
+            Hit();
+            collision.GetComponent<HealthBase>().GetDamage(damage);
         }
-        explosionHits.Clear();
+        else if (collision.GetComponent<HealthDestructable>())
+        {
+            Hit();
+            collision.GetComponent<HealthDestructable>().GetDamage(damage);
+        }
+        else if (collision.GetComponent<HealthPlayer>())
+        {
+            Hit();
+            collision.GetComponent<HealthPlayer>().GetDamage(damage);
+        }
+        else if (collision.GetComponent<PlayerBullet>())
+        {
+            collision.GetComponent<PlayerBullet>().Hit(damage);
+            Hit();
+        }
+        else if (collision.GetComponent<HealthIndestructable>() || collision.GetComponent<Wall>())
+        {
+            Explode();
+        }
     }
 
     public void Hit()
@@ -62,12 +54,48 @@ public class EnemyBullet : MonoBehaviour
         }
     }
 
+    public void Hit(int value)
+    {
+        health -= value;
+        if (health <= 0)
+        {
+            Explode();
+        }
+    }
+
     public void Explode()
     {
-        GameObject explosion = Instantiate(enemyBulletPrefab, this.transform);
-        explosion.GetComponent<DestroyUtil>().DestroyHelper();
+        explosionHits = Physics2D.OverlapBoxAll(transform.position, explosionRadius, 0f).ToList();
+        foreach (var item in explosionHits)
+        {
+            if (item.gameObject.GetComponent<HealthBase>())
+            {
+                item.GetComponent<HealthBase>().GetDamage(damage);
+            }
+            else if (item.GetComponent<HealthDestructable>())
+            {
+                item.GetComponent<HealthDestructable>().GetDamage(damage);
+            }
+            else if (item.GetComponent<HealthPlayer>())
+            {
+                item.GetComponent<HealthPlayer>().GetDamage(damage);
+            }
+            else if (item.GetComponent<PlayerBullet>())
+            {
+                item.GetComponent<PlayerBullet>().Hit(damage);
+            }
+        }
+        explosionHits.Clear();
+        Instantiate(explosionPrefab, this.transform.position, this.transform.rotation);
         Destroy(this.gameObject);
     }
+
+    public void ModifyBullet(int damageValue, int healthValue)
+    {
+        this.damage += damageValue;
+        this.health += healthValue;
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;

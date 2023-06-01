@@ -4,10 +4,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScreen : MonoBehaviour
 {
-    public GameObject startMenu;
-    public GameObject levelMenu;
-    public int level = 1;
-    public TextMeshProUGUI levelText;
+    [SerializeField] private GameObject startMenu;
+    [SerializeField] private GameObject levelMenu;
+    [SerializeField] private int level = 1;
+    [SerializeField] private int maxLevel = 50;
+    [SerializeField] private TextMeshProUGUI levelText;
 
     private void Awake()
     {
@@ -17,6 +18,8 @@ public class MainMenuScreen : MonoBehaviour
     public void SelectNextLevel()
     {
         level++;
+        if(level > maxLevel)
+            level = maxLevel;
         levelText.text = level.ToString();
         
     }
@@ -24,6 +27,8 @@ public class MainMenuScreen : MonoBehaviour
     public void SelectPrevLevel()
     {
         level--;
+        if (level < 1)
+            level = 1;
         levelText.text = level.ToString();
   
     }

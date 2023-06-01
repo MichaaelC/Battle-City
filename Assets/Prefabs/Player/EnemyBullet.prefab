@@ -29,8 +29,8 @@ Transform:
   m_GameObject: {fileID: 3886228028866477266}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -147,8 +147,8 @@ MonoBehaviour:
   timer: 5
   health: 1
   damage: 1
-  enemyBulletPrefab: {fileID: 5680987914811285266, guid: 5473f96e01acde948a5d9fa7b3b971ab, type: 3}
-  explosionRadius: {x: 0.55, y: 0.55}
+  explosionPrefab: {fileID: 5680987914811285266, guid: 5473f96e01acde948a5d9fa7b3b971ab, type: 3}
+  explosionRadius: {x: 0.3, y: 0.3}
 --- !u!50 &-5959485842013822584
 Rigidbody2D:
   serializedVersion: 4
@@ -172,7 +172,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4

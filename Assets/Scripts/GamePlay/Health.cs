@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-	[SerializeField] private int maxHealth = 1;
+	[SerializeField] private int maxHealth = 10;
 	[SerializeField] private int startingHealth = 1;
 	[SerializeField] private int health;
 	private Color originalColor;
@@ -24,12 +24,17 @@ public class Health : MonoBehaviour
 		{
 			health = maxHealth;
 		}
-        else if (health <= 0)
+        if (health <= 0)
         {
             health = 0;
             Destroy(gameObject);
         }
     }
+
+	public void ModifyHealth(int value)
+	{
+		health += value;
+	}
 
 	public void ResetHealth()
 	{
