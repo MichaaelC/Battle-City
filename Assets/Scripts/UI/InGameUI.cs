@@ -7,6 +7,7 @@ public class InGameUI : MonoBehaviour
 {
     public GameObject gameOver;
     public GameObject levelComplete;
+    public GameObject pauseMenu;
 
     public void ShowGameOverScreen()
     {
@@ -16,6 +17,16 @@ public class InGameUI : MonoBehaviour
     public void ShowContinueGameScreen()
     {
         levelComplete.SetActive(true);
+    }
+
+    public void ShowPauseMenu()
+    {
+        pauseMenu.SetActive(true);
+    }
+
+    public void HidePauseMenu()
+    {
+        pauseMenu.SetActive(false);
     }
 
     public static void NextLevel()

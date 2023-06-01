@@ -24,7 +24,6 @@ public class FollowCamera : MonoBehaviour
         playerBase = FindObjectOfType<HealthBase>().gameObject;
         basePosition = playerBase.transform.position;
         basePosition.Set(basePosition.x, basePosition.y, transform.position.z);
-        //StartCoroutine(CFollow());
     }
 
     private void Update()

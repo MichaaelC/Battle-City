@@ -73,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
         direction = value.Get<Vector2>();
     }
 
-    public void OnFire(InputValue input)
+    public void OnFire()
     {
         ps.Shoot(dir);
     }

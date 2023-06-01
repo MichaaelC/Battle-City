@@ -587,10 +587,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
-  m_LookaheadTime: 0.5
-  m_LookaheadSmoothing: 15
+  m_LookaheadTime: 0.6
+  m_LookaheadSmoothing: 10
   m_LookaheadIgnoreY: 0
-  m_XDamping: 1
+  m_XDamping: 0
   m_YDamping: 1
   m_ZDamping: 1
   m_TargetMovementOnly: 1
@@ -745,10 +745,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 4933611203283430053, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
-      propertyPath: m_PixelPerfect
-      value: 1
+    - target: {fileID: 2051300887241713159, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 230903102338252656}
+    - target: {fileID: 2051300887241713159, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HidePauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 3563380831334772241, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
+      propertyPath: m_Name
+      value: Resume Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 3997669357421877715, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
+      propertyPath: m_Name
+      value: GameOver
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933611203283430053, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 3598518363839799378}
     - target: {fileID: 7231415138328289254, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -832,6 +848,14 @@ PrefabInstance:
     - target: {fileID: 7231415138328289254, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8471708474050817186, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 230903102338252656}
+    - target: {fileID: 8471708474050817186, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToMainMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
