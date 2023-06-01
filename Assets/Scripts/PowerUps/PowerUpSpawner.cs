@@ -3,18 +3,18 @@ using UnityEngine;
 
 public class PowerUpSpawner : MonoBehaviour
 {
-    [SerializeField] private float spawnDelay;
     [SerializeField] private int maxPowerUps = 5;
-    [SerializeField] private float minX = -6;
-    [SerializeField] private float minY = -6;
-    [SerializeField] private float maxX = 6;
-    [SerializeField] private float maxY = 6;
+    [SerializeField] private float spawnDelay = 5f;
+    [SerializeField] private float minX = -6f;
+    [SerializeField] private float minY = -6f;
+    [SerializeField] private float maxX = 6f;
+    [SerializeField] private float maxY = 6f;
     [SerializeField] private GameObject[] powerUpPrefabs;
-    [SerializeField] private List<GameObject> currentPowerUps;
 
-    private int randomIndex = 0;
-    private Vector2 randomPosition;
+    private List<GameObject> currentPowerUps;
     private List<GameObject> temp = new();
+    private Vector2 randomPosition;
+    private int randomIndex = 0;
 
     private void Start()
     {

@@ -10,11 +10,11 @@ public class EnemyShoot : MonoBehaviour
     [SerializeField] private float minDelay = 0.8f;
     [SerializeField] private float maxDelay = 4f;
     
-    private bool canShoot = true;
-
     private Rigidbody2D enemyRb;
     private GameObject bullet;
     private WaitForSeconds wait;
+    
+    private bool canShoot = true;
 
     private void Awake()
     {

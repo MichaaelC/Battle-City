@@ -6,7 +6,7 @@ public class Pause : MonoBehaviour
 
     private void OnEnable()
     {
-        PauseGame();    
+        PauseGame();
     }
 
     private void OnDisable()
@@ -16,7 +16,9 @@ public class Pause : MonoBehaviour
 
     public void PauseGame()
     {
-       if(!isPause)
+        //It produces an error related to input system when clicking the pause button onscreen,
+        //but still works fine for now
+        if (!isPause)
         {
             isPause = true;
             Time.timeScale = 0;
@@ -26,5 +28,6 @@ public class Pause : MonoBehaviour
             isPause = false;
             Time.timeScale = 1;
         }
+        Debug.Log("An error log is produced when clicking the pause button onscreen");
     }
 }

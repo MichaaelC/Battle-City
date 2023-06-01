@@ -11,12 +11,10 @@ public class FollowCamera : MonoBehaviour
     [SerializeField] private Vector3 basePosition;
 
     private CinemachineVirtualCamera cam;
-    private WaitForSeconds wait;
 
     private void Awake()
     {
         cam = GetComponent<CinemachineVirtualCamera>();
-        wait = new WaitForSeconds(0.1f);
     }
 
     private void Start()

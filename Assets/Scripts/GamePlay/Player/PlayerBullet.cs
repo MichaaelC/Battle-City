@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
 {
-    [SerializeField] private float timer = 5f;
+    [SerializeField] private GameObject explosionPrefab;
+    [SerializeField] private Vector2 explosionRadius = new (1f, 1f);
     [SerializeField] private int health = 1;
     [SerializeField] private int damage = 1;
-    [SerializeField] private GameObject explosionPrefab;
+    [SerializeField] private float timer = 5f;
 
-    [SerializeField] private Vector2 explosionRadius = new (1f, 1f);
+    private Collider2D col;
     private List<Collider2D> explosionHits;
+
+    private void Awake()
+    {
+        col = GetComponent<Collider2D>();
+    }
 
     private void Start()
     {
@@ -50,6 +56,7 @@ public class PlayerBullet : MonoBehaviour
         health--;
         if (health <= 0)
         {
+            col.enabled = false;
             Explode();
         }
     }
@@ -59,6 +66,7 @@ public class PlayerBullet : MonoBehaviour
         health -= value;
         if (health <= 0)
         {
+            col.enabled = false;
             Explode();
         }
     }

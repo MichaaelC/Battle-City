@@ -44,8 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b2eb443ca770fd429246c8ea9bfd3ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 422061969883361049}
+  maxPowerUps: 4
+  spawnDelay: 15
+  minX: -6
+  minY: -6
+  maxX: 6
+  maxY: 6
   powerUpPrefabs:
+  - {fileID: 3652647148681022245, guid: f2db833259ea9c24ab149b26c1965144, type: 3}
   - {fileID: 3652647148681022245, guid: f2db833259ea9c24ab149b26c1965144, type: 3}
   - {fileID: 3652647148681022245, guid: 07dd21f4d54aa7b44a789da19bf1df56, type: 3}
   - {fileID: 3652647148681022245, guid: cba950eb179c9f0408b6151bc24078c5, type: 3}
@@ -56,11 +62,4 @@ MonoBehaviour:
   - {fileID: 643374391419400798, guid: 16190c1374297ed4884fc7f98382dff2, type: 3}
   - {fileID: 643374391419400798, guid: 16190c1374297ed4884fc7f98382dff2, type: 3}
   - {fileID: 643374391419400798, guid: 16190c1374297ed4884fc7f98382dff2, type: 3}
-  - {fileID: 643374391419400798, guid: 16190c1374297ed4884fc7f98382dff2, type: 3}
-  maxPowerUps: 3
-  currentPowerUps: 0
-  spawnDelay: 10
-  minX: -6
-  minY: -6
-  maxX: 6
-  maxY: 6
+  currentPowerUps: []

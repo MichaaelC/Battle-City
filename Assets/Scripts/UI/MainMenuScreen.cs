@@ -6,9 +6,9 @@ public class MainMenuScreen : MonoBehaviour
 {
     [SerializeField] private GameObject startMenu;
     [SerializeField] private GameObject levelMenu;
+    [SerializeField] private TextMeshProUGUI levelText;
     [SerializeField] private int level = 1;
     [SerializeField] private int maxLevel = 50;
-    [SerializeField] private TextMeshProUGUI levelText;
 
     private void Awake()
     {

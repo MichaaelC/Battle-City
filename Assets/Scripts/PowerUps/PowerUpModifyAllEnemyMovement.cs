@@ -3,6 +3,7 @@ using UnityEngine;
 public class PowerUpModifyAllEnemyMovement : MonoBehaviour
 {
     [SerializeField] private float movementModificationMultiplier = 0.5f;
+    
     private EnemyMoveAI[] enemies;
 
     private void OnTriggerEnter2D(Collider2D collision)

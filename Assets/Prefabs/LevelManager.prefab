@@ -45,12 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8739554865664417538, guid: c1d3312c74fb7f44bb5d277ed1b87661, type: 3}
-  spawnPoint: {fileID: 876917682220542923}
-  isStart: 0
-  spawnTimer: 8
   spawnLimit: 2
+  spawnTimer: 8
+  isStart: 0
   spawnCount: []
-  temp: []
 --- !u!1 &1124577044571187414
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,12 +344,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8739554865664417538, guid: c1d3312c74fb7f44bb5d277ed1b87661, type: 3}
-  spawnPoint: {fileID: 3537481620991276821}
-  isStart: 0
-  spawnTimer: 8
   spawnLimit: 2
+  spawnTimer: 8
+  isStart: 0
   spawnCount: []
-  temp: []
 --- !u!1 &6276689571089258769
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,10 +392,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abf7d850970e0b9448e935e16f1198d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isEnabled: 1
   playerPrefab: {fileID: 7861958584944698577, guid: 5faef4c33d11db642928c908752c48c9, type: 3}
   player: {fileID: 0}
-  spawnDelay: 0.5
-  isEnabled: 1
 --- !u!1 &6312975195097516638
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,12 +518,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8739554865664417538, guid: c1d3312c74fb7f44bb5d277ed1b87661, type: 3}
-  spawnPoint: {fileID: 244664379058175073}
-  isStart: 0
-  spawnTimer: 8
   spawnLimit: 2
+  spawnTimer: 8
+  isStart: 0
   spawnCount: []
-  temp: []
 --- !u!1 &8806089732444990117
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,12 +655,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8739554865664417538, guid: c1d3312c74fb7f44bb5d277ed1b87661, type: 3}
-  spawnPoint: {fileID: 207780186368751397}
-  isStart: 0
-  spawnTimer: 8
   spawnLimit: 2
+  spawnTimer: 8
+  isStart: 0
   spawnCount: []
-  temp: []
 --- !u!1 &9151374982611691025
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,12 +713,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47f97030b1af11346a200aae20737ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isEnabled: 0
+  playerLives: 3
+  spawnLimit: 20
   player: {fileID: 0}
   playerBase: {fileID: 0}
   ui: {fileID: 230903102338252656}
-  playerLives: 3
-  isEnabled: 0
-  spawnLimit: 20
   enemySpawn:
   - {fileID: 4109448899010530650}
   - {fileID: 8132975373700073536}
@@ -741,9 +732,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5158483282699094250}
     m_Modifications:
+    - target: {fileID: 595794116986966037, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1025755933153354221, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: InGameUI
       objectReference: {fileID: 0}
     - target: {fileID: 2051300887241713159, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -752,6 +747,14 @@ PrefabInstance:
     - target: {fileID: 2051300887241713159, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: HidePauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2088632581361595002, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3540128863901695587, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3563380831334772241, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
       propertyPath: m_Name

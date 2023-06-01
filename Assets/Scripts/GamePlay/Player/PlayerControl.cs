@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
@@ -13,6 +11,7 @@ public class PlayerControl : MonoBehaviour
 
     private void OnMenu()
     {
+        //has reference in input system
         ui.ShowPauseMenu();
     }
 }

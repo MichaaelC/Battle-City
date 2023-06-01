@@ -6,8 +6,9 @@ public class Health : MonoBehaviour
 	[SerializeField] private int maxHealth = 10;
 	[SerializeField] private int startingHealth = 1;
 	[SerializeField] private int health;
-	private Color originalColor;
+	
 	private SpriteRenderer sr;
+	private Color originalColor;
 
 	void Start()
 	{
