@@ -7,10 +7,10 @@
       "dependencies": {
         "com.unity.editorcoroutines": "1.0.0"
       },
-      "hash": "cf0d016dd29f055b0c5a2cc947fbde21d543edbb"
+      "hash": "d321d6ef328b38aea6c9a02a9878058c80c123a8"
     },
     "com.unity.2d.animation": {
-      "version": "9.0.2",
+      "version": "9.0.3",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -145,7 +145,7 @@
       "depth": 0,
       "source": "builtin",
       "dependencies": {
-        "com.unity.2d.animation": "9.0.2",
+        "com.unity.2d.animation": "9.0.3",
         "com.unity.2d.pixel-perfect": "5.0.3",
         "com.unity.2d.psdimporter": "8.0.2",
         "com.unity.2d.sprite": "1.0.0",

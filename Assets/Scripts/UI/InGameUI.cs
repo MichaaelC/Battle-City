@@ -8,6 +8,11 @@ public class InGameUI : MonoBehaviour
     [SerializeField] private GameObject levelComplete;
     [SerializeField] private GameObject pauseMenu;
 
+    private void Start()
+    {
+        ShowControls();
+    }
+
     public void ShowGameOverScreen()
     {
         gameOver.SetActive(true);
@@ -33,12 +38,22 @@ public class InGameUI : MonoBehaviour
 
     public void ShowControls()
     {
-        controls.SetActive(true);
+        if (Application.platform == RuntimePlatform.WebGLPlayer ||
+            Application.platform == RuntimePlatform.Android || 
+            Application.platform == RuntimePlatform.IPhonePlayer ||
+            Application.isEditor)
+        {
+            controls.GetComponent<Canvas>().enabled = true; ;
+        }
+        else
+        {
+            controls.SetActive(false);
+        }
     }
 
     public void HideControls()
     {
-        controls.SetActive(false);
+        controls.GetComponent<Canvas>().enabled = false;
     }
 
     public static void NextLevel()

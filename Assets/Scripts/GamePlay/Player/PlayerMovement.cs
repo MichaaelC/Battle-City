@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 public enum Direction
 { up, down, left, right };
@@ -11,7 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private PlayerShoot ps;
     private Vector2 direction;
-    private Direction dir;
+    private Direction dir = 0;
+    private Direction tempDir = 0;
 
     private float moveSpeedOriginal;
 
@@ -40,26 +42,27 @@ public class PlayerMovement : MonoBehaviour
 
     private void FaceDirection()
     {
-        if (direction.x == 1 && direction.y == 0)
+        if(dir != tempDir)
         {
-            transform.eulerAngles = new Vector3(0f, 0f, 270f);
-            dir = Direction.right;
-        }
-        else if (direction.x == -1 && direction.y == 0)
-        {
-            transform.eulerAngles = new Vector3(0f, 0f, 90f);
-            dir = Direction.left;
-        }
-        else if (direction.x == 0 && direction.y == 1)
-        {
-            transform.eulerAngles = new Vector3(0f, 0f, 0f);
-
-            dir = Direction.up;
-        }
-        else if (direction.x == 0 && direction.y == -1)
-        {
-            transform.eulerAngles = new Vector3(0f, 0f, 180f);
-            dir = Direction.down;
+            switch (dir)
+            {
+                case Direction.up:
+                    transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+                        tempDir = Direction.up;
+                    break;
+                case Direction.down:
+                    transform.rotation = Quaternion.Euler(0f, 0f, 180f);
+                        tempDir = Direction.down;
+                    break;
+                case Direction.left:
+                    transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+                        tempDir = Direction.left;
+                    break;
+                case Direction.right:
+                    transform.rotation = Quaternion.Euler(0f, 0f, 270f);
+                        tempDir = Direction.right;
+                    break;
+            }
         }
     }
 
@@ -72,16 +75,19 @@ public class PlayerMovement : MonoBehaviour
     {
         //has reference in input system
         direction = value.Get<Vector2>();
+        
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
         {
             // Horizontal movement is greater than vertical
             if (direction.x > 0)
             {
                 direction = Vector2.right;
+                dir = Direction.right;
             }
             else
             {
                 direction = Vector2.left;
+                dir = Direction.left;
             }
         }
         else if (Mathf.Abs(direction.x) < Mathf.Abs(direction.y))
@@ -90,16 +96,32 @@ public class PlayerMovement : MonoBehaviour
             if (direction.y > 0)
             {
                 direction = Vector2.up;
+                dir = Direction.up;
             }
             else
             {
                 direction = Vector2.down;
+                dir = Direction.down;
             }
         }
-        else
+
+        if (Mathf.Abs(direction.x) == Mathf.Abs(direction.y))
         {
-            direction = Vector2.zero;
+            if (direction.x > 0)
+            {
+                direction = Vector2.right;
+                dir = Direction.right;
+            }
+            else if (direction.x < 0)
+            {
+                direction = Vector2.left;
+                dir = Direction.left;
+            }
         }
+
+
+        Debug.Log(direction);
+        
     }
 
     public void OnFire()

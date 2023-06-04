@@ -11,7 +11,7 @@ public class PowerUpSpawner : MonoBehaviour
     [SerializeField] private float maxY = 6f;
     [SerializeField] private GameObject[] powerUpPrefabs;
 
-    private List<GameObject> currentPowerUps;
+    private List<GameObject> currentPowerUps = new();
     private List<GameObject> temp = new();
     private Vector2 randomPosition;
     private int randomIndex = 0;
@@ -23,7 +23,6 @@ public class PowerUpSpawner : MonoBehaviour
 
     private void SpawnPowerUp()
     {
-        CheckPowerUps();
         if (currentPowerUps.Count >= maxPowerUps)
         {
             return;
@@ -33,6 +32,10 @@ public class PowerUpSpawner : MonoBehaviour
         randomIndex = Random.Range(0, powerUpPrefabs.Length);
 
         currentPowerUps.Add(Instantiate(powerUpPrefabs[randomIndex], randomPosition, Quaternion.identity));
+        if (currentPowerUps.Count < maxPowerUps)
+        {
+            CheckPowerUps();
+        }
     }
 
     private Vector2 GenerateRandomPosition()

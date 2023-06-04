@@ -1,0 +1,12 @@
+Dividing Line 
+
+A mysterious road splits the landscape into two contrasting realms. 
+On one side lies a dense forest with untamed bushes and structures waiting to be explored and demolished. 
+The other half reveals a serene landscape adorned with towering trees and sparkling lakes
+
+Findings
+- The game is fully playable(can be completed on any succesful generation)
+- Sometimes the dividing road wont spawn in the center or anywhere on the map
+- Low failure rate
+- Low count tiles
+- Increase enemy max count or decrease enemy spawn delay to make enemies get near to the player faster.

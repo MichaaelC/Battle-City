@@ -1,7 +1,5 @@
 using UnityEngine;
 using Cinemachine;
-using System.Collections;
-using UnityEngine.PlayerLoop;
 
 public class FollowCamera : MonoBehaviour
 {
@@ -24,7 +22,7 @@ public class FollowCamera : MonoBehaviour
         basePosition.Set(basePosition.x, basePosition.y, transform.position.z);
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         SetPlayer();
         Follow();
