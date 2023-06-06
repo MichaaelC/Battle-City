@@ -8,7 +8,6 @@ public class EnemyMoveAI : MonoBehaviour
     [SerializeField] private float minChangeDirectionTime = 0.5f;
     [SerializeField] private float maxChangeDirectionTime = 3.0f;
     [SerializeField] private float raycastDistance = 1f;
-
     [SerializeField] private bool canRotate = true;
     [SerializeField] private bool canMove = true;
 
@@ -17,11 +16,10 @@ public class EnemyMoveAI : MonoBehaviour
     private Vector2 movementDirection;
     private RaycastHit2D hit;
     private LayerMask foreGroundLayerMask;
+    private WaitForSeconds wait;
 
     private float angle;
     private float moveSpeedOriginal;
-
-    private WaitForSeconds wait;
 
     private void Awake()
     {

@@ -2,22 +2,23 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject playerBase;
-    public InGameUI ui;
-    public int playerLives = 3;
     public bool isEnabled = false;
+    public int playerLives = 3;
+    public int spawnLimit = 20;
 
-    public int spawnLimit;
-    public EnemySpawn[] enemySpawn;
+    [SerializeField] private GameObject player;
+    [SerializeField] private GameObject playerBase;
+    [SerializeField] private InGameUI ui;
+    [SerializeField] private EnemySpawn[] enemySpawn;
+
     private PlayerSpawn playerSpawn;
 
-    void Start()
+    private void Start()
     {
         isEnabled = true;
         playerSpawn = FindObjectOfType<PlayerSpawn>();
         playerBase = FindObjectOfType<HealthBase>().gameObject;
-        player = playerSpawn.player;
+        player = playerSpawn.GetPlayer();
         enemySpawn = GetComponentsInChildren<EnemySpawn>();
         ui = GetComponentInChildren<InGameUI>();
         StartSpawn();
@@ -32,7 +33,7 @@ public class LevelManager : MonoBehaviour
 
     private void CheckIfBaseIsAlive()
     {
-        if(playerBase == null)
+        if (playerBase == null)
         {
             GameOver();
         }
@@ -40,17 +41,19 @@ public class LevelManager : MonoBehaviour
 
     private void CheckPlayerLives()
     {
-        if (playerSpawn.player == null)
+        if (playerSpawn.GetPlayer() == null)
         {
             if (playerLives > 0)
             {
                 playerLives--;
                 playerSpawn.SpawnPlayer();
+                player = playerSpawn.GetPlayer();
             }
             else if (playerLives == 0)
             {
                 playerLives--;
                 playerSpawn.SpawnPlayer();
+                player = playerSpawn.GetPlayer();
                 playerSpawn.isEnabled = false;
             }
             else if (playerLives < 0)
@@ -88,7 +91,7 @@ public class LevelManager : MonoBehaviour
         bool value = true;
         for (int i = 0; i < enemySpawn.Length; i++)
         {
-            if (!enemySpawn[i].isEmpty())
+            if (!enemySpawn[i].IsEmpty())
             {
                 value = false;
             }

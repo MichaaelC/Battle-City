@@ -144,11 +144,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622a648fd5258364a93f5d6feb83baf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 5
-  health: 1
-  damage: 1
   explosionPrefab: {fileID: 5680987914811285266, guid: 5473f96e01acde948a5d9fa7b3b971ab, type: 3}
   explosionRadius: {x: 0.3, y: 0.3}
+  health: 1
+  damage: 1
+  timer: 5
 --- !u!50 &-5959485842013822584
 Rigidbody2D:
   serializedVersion: 4

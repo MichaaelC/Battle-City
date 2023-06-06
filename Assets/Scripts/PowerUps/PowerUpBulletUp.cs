@@ -6,6 +6,7 @@ public class PowerUpBulletUp : MonoBehaviour
     [SerializeField] private float additionalSpeed = 1f;
     [SerializeField] private int additionalPower = 1;
     [SerializeField] private int additionalHealth = 1;
+    
     private PlayerShoot pickerShoot;
 
     private void OnTriggerEnter2D(Collider2D collision)

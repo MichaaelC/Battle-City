@@ -5,19 +5,17 @@ using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour
 {
-    public GameObject enemyPrefab;
-    //public float spawnDelay = 5f;
-    public Transform spawnPoint;
-    [SerializeField]
-    private bool isStart = false;
-    public float spawnTimer = 0f;
+    [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private int spawnLimit = 5;
+    [SerializeField] private float spawnTimer = 0f;
+    [SerializeField] private bool isStart = false;
+    [SerializeField] private List<GameObject> spawnCount;
 
-    public int spawnLimit = 5;
-    private bool isSpawning = false;
-    public List<GameObject> spawnCount;
     private WaitForSeconds spawnDelay;
     private LevelManager spawnLevel;
-    public List<EnemyMoveAI> temp;
+    private List<EnemyMoveAI> temp = new();
+
+    private bool isSpawning = false;
 
     private void Awake()
     {
@@ -34,7 +32,7 @@ public class EnemySpawn : MonoBehaviour
                 StartCoroutine(Spawn());
             }  
         }
-        //Wag idelete mamamatay ka
+        // To detect if spawn count is clear
         temp.Clear();
         temp = GetComponentsInChildren<EnemyMoveAI>().ToList();
         spawnCount.Clear();
@@ -61,7 +59,7 @@ public class EnemySpawn : MonoBehaviour
     {
         if(spawnCount.Count <= spawnLimit)
         {
-            GameObject newEnemy = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+            GameObject newEnemy = Instantiate(enemyPrefab, this.transform.position, this.transform.rotation);
             newEnemy.transform.parent = transform;
             spawnLevel.spawnLimit--;
         }
@@ -76,7 +74,7 @@ public class EnemySpawn : MonoBehaviour
         isStart = false;
     }
 
-    public bool isEmpty()
+    public bool IsEmpty()
     {
         if (spawnCount.Count <= 0)
         {

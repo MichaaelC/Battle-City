@@ -1,24 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ModWalk : MonoBehaviour
 {
-    public float _mod;
+    [SerializeField] private float modifier;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.GetComponent<EnemyMoveAI>())
         {
-            collision.GetComponent<EnemyMoveAI>().movementSpeed *= _mod;
+            collision.GetComponent<EnemyMoveAI>().movementSpeed *= modifier;
         }
         else if (collision.GetComponent<PlayerMovement>())
         {
-            collision.GetComponent<PlayerMovement>().moveSpeed *= _mod;
+            collision.GetComponent<PlayerMovement>().moveSpeed *= modifier;
         }
     }
     
-    // Update is called once per frame
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.GetComponent<EnemyMoveAI>())

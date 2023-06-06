@@ -3,6 +3,7 @@ using UnityEngine;
 public class PowerUpArmorUp : MonoBehaviour
 {
     [SerializeField] private int additionalArmor = 1;
+    
     private Health pickerHealth;
 
     private void OnTriggerEnter2D(Collider2D collision)

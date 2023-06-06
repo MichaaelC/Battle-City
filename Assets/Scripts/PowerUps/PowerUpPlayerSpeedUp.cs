@@ -6,12 +6,12 @@ public class PlayerSpeedPowerUp : MonoBehaviour
     [SerializeField] private float speedMultiplier = 1.5f;
     [SerializeField] private float powerUpDuration = 3f;
 
-    private static bool powerUpActivated = false;
-    private static Coroutine speedUpCoroutine;
-
     private Collider2D col;
     private SpriteRenderer sr;
     private PlayerMovement playerMovement;
+
+    private static bool powerUpActivated = false;
+    private static Coroutine speedUpCoroutine;
 
     private void Awake()
     {

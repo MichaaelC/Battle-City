@@ -53,7 +53,7 @@ MonoBehaviour:
   bulletSpeed: 5
   additionalBulletPower: 0
   additionalBulletHealth: 0
-  minDelay: 1
+  minDelay: 1.4
   maxDelay: 3
 --- !u!114 &3670674919210627810
 MonoBehaviour:
