@@ -143,4 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00eb3cc242b07e54d8185f833f8426b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementModificationMultiplier: 0.5
+  movementModificationMultiplier: 0.75

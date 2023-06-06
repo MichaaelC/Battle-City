@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d686617d7f675d4dbc56e346ba2e6e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  additionalFireRate: 1
-  additionalSpeed: 1.2
+  multiplierFireRate: 1
+  multiplierSpeed: 1.5
   additionalPower: 0
   additionalHealth: 0
 --- !u!61 &3664697826870311320

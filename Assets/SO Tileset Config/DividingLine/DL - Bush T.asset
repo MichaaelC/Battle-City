@@ -26,6 +26,7 @@ MonoBehaviour:
   compatibleLeft:
   - {fileID: 11400000, guid: bb4ba213dae33914fa67ebc051f9b335, type: 2}
   - {fileID: 11400000}
+  - {fileID: 11400000, guid: 4a49a820a69acf646b386994b450d7b9, type: 2}
   compatibleRight:
   - {fileID: 11400000, guid: bb4ba213dae33914fa67ebc051f9b335, type: 2}
   - {fileID: 11400000}

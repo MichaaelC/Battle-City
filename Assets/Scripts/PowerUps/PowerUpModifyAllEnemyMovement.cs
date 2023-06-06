@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PowerUpModifyAllEnemyMovement : MonoBehaviour
 {
-    [SerializeField] private float movementModificationMultiplier = 0.5f;
+    [SerializeField] private float movementModificationMultiplier = 0.75f;
     
     private EnemyMoveAI[] enemies;
 
