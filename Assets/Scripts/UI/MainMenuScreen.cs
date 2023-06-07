@@ -35,7 +35,7 @@ public class MainMenuScreen : MonoBehaviour
 
     public void EnterGame()
     {
-        SceneManager.LoadScene("SampleScene " + level);
+        SceneManager.LoadScene("Level " + level);
     }
 
 
