@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1960bd12f2473454e8d8e36099712b1e, type: 3}
+  m_Name: City DR
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 5094700779142852352, guid: ed6a40626f979b44ebd1fa8aafa4e718, type: 3}
+  id: 10
+  compatibleTop:
+  - {fileID: 11400000, guid: 87bf396646146be47bbbea2235cb5355, type: 2}
+  - {fileID: 11400000, guid: 1447fd7a39dff2049b85c705d89c4f2a, type: 2}
+  - {fileID: 11400000, guid: f5b9435c7624d9a46b8e24d1e4b8fb8b, type: 2}
+  compatibleBottom:
+  - {fileID: 11400000, guid: 543f78d61e397c8439577e996b498f72, type: 2}
+  - {fileID: 11400000, guid: c38c5223b09e1f64cb067e33a58a3e8b, type: 2}
+  - {fileID: 11400000, guid: eb8e7cc1310242e428c19352ab4d3f77, type: 2}
+  - {fileID: 11400000, guid: 225fd1d3ce79c0640bb50a3d4014e947, type: 2}
+  compatibleLeft:
+  - {fileID: 11400000, guid: 7838d6561270f7641b10d14ebe1df1cf, type: 2}
+  - {fileID: 11400000, guid: 87bf396646146be47bbbea2235cb5355, type: 2}
+  - {fileID: 11400000, guid: 225fd1d3ce79c0640bb50a3d4014e947, type: 2}
+  - {fileID: 11400000, guid: f5b9435c7624d9a46b8e24d1e4b8fb8b, type: 2}
+  compatibleRight:
+  - {fileID: 11400000, guid: 543f78d61e397c8439577e996b498f72, type: 2}
+  - {fileID: 11400000, guid: eb8e7cc1310242e428c19352ab4d3f77, type: 2}
+  - {fileID: 11400000, guid: e20f37d21b3f4ab4080c1912db9df948, type: 2}
+  - {fileID: 11400000, guid: 1447fd7a39dff2049b85c705d89c4f2a, type: 2}

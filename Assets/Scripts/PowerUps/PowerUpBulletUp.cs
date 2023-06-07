@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class PowerUpBulletUp : MonoBehaviour
 {
-    [SerializeField] private float additionalFireRate = 1f;
-    [SerializeField] private float additionalSpeed = 1f;
+    [SerializeField] private float multiplierFireRate = 1f;
+    [SerializeField] private float multiplierSpeed = 1f;
     [SerializeField] private int additionalPower = 1;
     [SerializeField] private int additionalHealth = 1;
     
@@ -15,7 +15,7 @@ public class PowerUpBulletUp : MonoBehaviour
         {
             if (pickerShoot != null)
             {
-                pickerShoot.ModifyShootProperties(additionalFireRate, additionalSpeed, additionalPower, additionalHealth);
+                pickerShoot.ModifyShootProperties(multiplierFireRate, multiplierSpeed, additionalPower, additionalHealth);
             }
             Destroy(this.gameObject);
             Debug.Log("PowerUp - BulletUp");

@@ -4,7 +4,7 @@ using UnityEngine;
 public class PowerUpSpawner : MonoBehaviour
 {
     [SerializeField] private int maxPowerUps = 5;
-    [SerializeField] private float spawnDelay = 5f;
+    [SerializeField] private float spawnDelay = 15f;
     [SerializeField] private float minX = -6f;
     [SerializeField] private float minY = -6f;
     [SerializeField] private float maxX = 6f;

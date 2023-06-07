@@ -7,6 +7,7 @@ The other half reveals a serene landscape adorned with towering trees and sparkl
 Findings
 - The game is fully playable(can be completed on any succesful generation)
 - Sometimes the dividing road wont spawn in the center or anywhere on the map
-- Low failure rate
+- Low generation failure rate
 - Low count tiles
+- Hard Level (not enough cover for base on top side, too much trees/bush)
 - Increase enemy max count or decrease enemy spawn delay to make enemies get near to the player faster.
