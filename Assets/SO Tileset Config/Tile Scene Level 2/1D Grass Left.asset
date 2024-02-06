@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1960bd12f2473454e8d8e36099712b1e, type: 3}
+  m_Name: 1D Grass Left
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 5094700779142852352, guid: ee046adbc302dd7418e15cf1c1877716, type: 3}
+  id: 2
+  compatibleTop:
+  - {fileID: 11400000, guid: c443b2019c7b54a4fbb385bda8e01371, type: 2}
+  - {fileID: 11400000, guid: d66c98e236458d54c8435ecee1be9b48, type: 2}
+  - {fileID: 11400000, guid: bacf38686b33e7048857ad499ceee5e7, type: 2}
+  - {fileID: 11400000, guid: e8a0a5d97e0d4e34d94cd409fef67811, type: 2}
+  - {fileID: 11400000, guid: 899d824d0c787fe4e92c688015cc27b1, type: 2}
+  compatibleBottom:
+  - {fileID: 11400000, guid: 6da06ec96ee23ba4ab3f885ddbec3841, type: 2}
+  - {fileID: 11400000, guid: ee9f5d7f376288a4d986416585a98f89, type: 2}
+  - {fileID: 11400000, guid: bacf38686b33e7048857ad499ceee5e7, type: 2}
+  - {fileID: 11400000, guid: e8a0a5d97e0d4e34d94cd409fef67811, type: 2}
+  - {fileID: 11400000, guid: 899d824d0c787fe4e92c688015cc27b1, type: 2}
+  compatibleLeft:
+  - {fileID: 11400000, guid: d66c98e236458d54c8435ecee1be9b48, type: 2}
+  - {fileID: 11400000, guid: f876b7e383b17ee418bf09370f1f4030, type: 2}
+  - {fileID: 11400000, guid: ee9f5d7f376288a4d986416585a98f89, type: 2}
+  compatibleRight:
+  - {fileID: 11400000, guid: ee9f5d7f376288a4d986416585a98f89, type: 2}
+  - {fileID: 11400000, guid: d66c98e236458d54c8435ecee1be9b48, type: 2}
+  - {fileID: 11400000, guid: bacf38686b33e7048857ad499ceee5e7, type: 2}
+  - {fileID: 11400000, guid: 899d824d0c787fe4e92c688015cc27b1, type: 2}

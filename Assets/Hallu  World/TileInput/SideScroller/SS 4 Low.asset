@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1960bd12f2473454e8d8e36099712b1e, type: 3}
+  m_Name: SS 4 Low
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 1678409229872279800, guid: 006c6fdf02f909a4daca97ec0e135f65, type: 3}
+  id: 5
+  compatibleTop:
+  - {fileID: 11400000, guid: d4111c58fb5e173499604b6e0dc49d27, type: 2}
+  compatibleBottom:
+  - {fileID: 11400000, guid: c65b07f3318cc514aac84de5b98d1685, type: 2}
+  compatibleLeft:
+  - {fileID: 11400000, guid: 3cf7677574fc72c42a8978961e8d5609, type: 2}
+  - {fileID: 11400000}
+  - {fileID: 11400000, guid: c32e65eed91c7804493893fa09ec1655, type: 2}
+  compatibleRight:
+  - {fileID: 11400000, guid: 3cf7677574fc72c42a8978961e8d5609, type: 2}
+  - {fileID: 11400000}
+  - {fileID: 11400000, guid: c32e65eed91c7804493893fa09ec1655, type: 2}
+  - {fileID: 11400000, guid: c74349d6ec0614844bc88fe39740eedb, type: 2}

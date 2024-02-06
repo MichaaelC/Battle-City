@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1960bd12f2473454e8d8e36099712b1e, type: 3}
+  m_Name: Water STD 1
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 1278251932485107559, guid: bc6de7c5f403c7f42b5b1cdcf77ef9df, type: 3}
+  id: 3
+  compatibleTop:
+  - {fileID: 11400000, guid: 3bef5028f76258b4f93f7188bce812ce, type: 2}
+  compatibleBottom:
+  - {fileID: 11400000}
+  - {fileID: 11400000, guid: 434d94e2ed744f841934ba677f1389c9, type: 2}
+  compatibleLeft:
+  - {fileID: 11400000}
+  compatibleRight:
+  - {fileID: 11400000}

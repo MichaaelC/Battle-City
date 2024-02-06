@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1bd19df3282604ba22a455d47b2068, type: 3}
+  m_Name: Sand Tile Set 3
+  m_EditorClassIdentifier: 
+  AllInputTiles:
+  - {fileID: 11400000, guid: 3d1a5fddc6ec09b498ac4609d5a5837f, type: 2}
+  - {fileID: 11400000, guid: 6af9e22f0c41bdb4b870ceb347f885c9, type: 2}
+  - {fileID: 11400000, guid: 1a64bf9afa10b1344a7df34013bf3340, type: 2}
+  - {fileID: 11400000, guid: 11e9cf74fdd2a8e46b758c237bcdb7e2, type: 2}
+  - {fileID: 11400000, guid: 1615b541eb9affe42bfa36dbebac7305, type: 2}
+  - {fileID: 11400000, guid: b3fb0cdc19d3e1f439745b6eaa2978ea, type: 2}
+  - {fileID: 11400000, guid: 6259bee1660bc6f42ade5f0d8c550754, type: 2}
+  - {fileID: 11400000, guid: 4f4682ee49cb08745b85eee83a71641d, type: 2}
+  - {fileID: 11400000, guid: d799345e946adbb49bed4cc1ddb63c74, type: 2}
+  - {fileID: 11400000, guid: c4a42b67604855e4e9ee3987a19bf64f, type: 2}
+  - {fileID: 11400000, guid: b41bf58192545a743b4a21279f342365, type: 2}
+  - {fileID: 11400000, guid: 97ce8ca1e5a3c694786c5824e1897d2a, type: 2}
+  - {fileID: 11400000, guid: 32e069f9be690164192a8cefcd229c4c, type: 2}
+  - {fileID: 11400000, guid: 1eaa43f44e019b341b8bda60d185a807, type: 2}
+  - {fileID: 11400000, guid: 99789a81fe9904e4f910a476e4430585, type: 2}
+  UniqueInputTiles: []
+  ForeGroundTiles: []
+  BackGroundTiles: []
+  FilledTiles: []
+  EdgeUpTiles: []
+  EdgeDownTiles: []
+  EdgeLeftTiles: []
+  EdgeRightTiles: []
+  ElbowUpLeftTiles: []
+  ElbowUpRightTiles: []
+  ElbowDownLeftTiles: []
+  ElbowDownRightTiles: []
+  CornerUpLeftTiles: []
+  CornerUpRightTiles: []
+  CornerDownLeftTiles: []
+  CornerDownRightTiles: []
+  CornerULDRTiles: []
+  CornerURDLTiles: []
+  FourFaceTiles: []
+  VerticalTiles: []
+  HorizontalTiles: []
+  TwoFaceUpLeftTiles: []
+  TwoFaceUpRightTiles: []
+  TwoFaceDownLeftTiles: []
+  TwoFaceDownRightTiles: []
+  ThreeFaceUpTiles: []
+  ThreeFaceDownTiles: []
+  ThreeFaceLeftTiles: []
+  ThreeFaceRightTiles: []
+  OneFaceUpTiles: []
+  OneFaceDownTiles: []
+  OneFaceLeftTiles: []
+  OneFaceRightTiles: []

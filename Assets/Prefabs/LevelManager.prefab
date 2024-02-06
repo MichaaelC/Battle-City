@@ -661,6 +661,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: InGameUI
       objectReference: {fileID: 0}
+    - target: {fileID: 1197059872996091659, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197059872996091659, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197059873509665721, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197059873509665722, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712922288240339416, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712922288240339416, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1712922288240339416, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
+      propertyPath: m_ReferencePixelsPerUnit
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 2051300887241713159, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -771,6 +799,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7231415138328289254, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399150298479114518, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399150298479114518, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8471708474050817186, guid: 3bbd453c392f7014f96e9ab3c067dd3f, type: 3}

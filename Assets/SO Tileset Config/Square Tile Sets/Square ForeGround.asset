@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1960bd12f2473454e8d8e36099712b1e, type: 3}
+  m_Name: Square ForeGround
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 9220940174443916361, guid: b252be633f9f90a419b64c33e35cffef, type: 3}
+  id: 3
+  compatibleTop:
+  - {fileID: 11400000, guid: 8f5899c6e019e9f449b5cafec704e596, type: 2}
+  compatibleBottom:
+  - {fileID: 11400000, guid: 8f5899c6e019e9f449b5cafec704e596, type: 2}
+  compatibleLeft:
+  - {fileID: 11400000, guid: d262ea6faac0fed48a4fd294b1bac89e, type: 2}
+  compatibleRight:
+  - {fileID: 11400000, guid: d262ea6faac0fed48a4fd294b1bac89e, type: 2}

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1960bd12f2473454e8d8e36099712b1e, type: 3}
+  m_Name: TTD FG
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 3420986586142388259, guid: c2d7166922cbb844bb59a8047000c365, type: 3}
+  id: 1
+  compatibleTop:
+  - {fileID: 11400000, guid: a5662a56b930c134588d381e6fb6d102, type: 2}
+  - {fileID: 11400000, guid: 4f094f3c485c531499991d6d2205cc60, type: 2}
+  - {fileID: 11400000}
+  - {fileID: 11400000, guid: 4a1950cefb25e7144b5992a74b0f27e0, type: 2}
+  compatibleBottom:
+  - {fileID: 11400000, guid: a5662a56b930c134588d381e6fb6d102, type: 2}
+  - {fileID: 11400000, guid: 4f094f3c485c531499991d6d2205cc60, type: 2}
+  - {fileID: 11400000}
+  - {fileID: 11400000, guid: 7db00fcdf76e3c140b1207d9cff2346b, type: 2}
+  compatibleLeft:
+  - {fileID: 11400000, guid: 4f094f3c485c531499991d6d2205cc60, type: 2}
+  - {fileID: 11400000}
+  - {fileID: 11400000, guid: e3da35d86e57bb84f8d2c76691817dfe, type: 2}
+  - {fileID: 11400000, guid: 583e0979431361641ae39b4482e4824b, type: 2}
+  compatibleRight:
+  - {fileID: 11400000, guid: 583e0979431361641ae39b4482e4824b, type: 2}
+  - {fileID: 11400000, guid: 4f094f3c485c531499991d6d2205cc60, type: 2}
+  - {fileID: 11400000}
+  - {fileID: 11400000, guid: 4a1950cefb25e7144b5992a74b0f27e0, type: 2}
+  - {fileID: 11400000, guid: 9ebeeac8632c58a4fb2f2c451ef33d69, type: 2}

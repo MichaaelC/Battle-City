@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1960bd12f2473454e8d8e36099712b1e, type: 3}
+  m_Name: SS 6 Cliff Left
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 760630005349152375, guid: 0bf3159e5485d7848bdd1b353f4c63f4, type: 3}
+  id: 7
+  compatibleTop:
+  - {fileID: 11400000, guid: d4111c58fb5e173499604b6e0dc49d27, type: 2}
+  compatibleBottom:
+  - {fileID: 11400000, guid: 9b876b629b46ceb4eab487d440dee714, type: 2}
+  compatibleLeft:
+  - {fileID: 11400000, guid: 3cf7677574fc72c42a8978961e8d5609, type: 2}
+  - {fileID: 11400000, guid: 281de56dceac56e4b8d72aac619982f2, type: 2}
+  - {fileID: 11400000, guid: c32e65eed91c7804493893fa09ec1655, type: 2}
+  compatibleRight:
+  - {fileID: 11400000, guid: 3cf7677574fc72c42a8978961e8d5609, type: 2}
+  - {fileID: 11400000, guid: 281de56dceac56e4b8d72aac619982f2, type: 2}

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1960bd12f2473454e8d8e36099712b1e, type: 3}
+  m_Name: 1D Desert Left
+  m_EditorClassIdentifier: 
+  gameObject: {fileID: 5094700779142852352, guid: 292562c1241295744b49108afc89dca4, type: 3}
+  id: 2
+  compatibleTop:
+  - {fileID: 11400000, guid: d799345e946adbb49bed4cc1ddb63c74, type: 2}
+  - {fileID: 11400000, guid: c4a42b67604855e4e9ee3987a19bf64f, type: 2}
+  - {fileID: 11400000, guid: b41bf58192545a743b4a21279f342365, type: 2}
+  - {fileID: 11400000, guid: 97ce8ca1e5a3c694786c5824e1897d2a, type: 2}
+  - {fileID: 11400000, guid: 32e069f9be690164192a8cefcd229c4c, type: 2}
+  - {fileID: 11400000, guid: 1eaa43f44e019b341b8bda60d185a807, type: 2}
+  compatibleBottom:
+  - {fileID: 11400000, guid: 3d1a5fddc6ec09b498ac4609d5a5837f, type: 2}
+  - {fileID: 11400000, guid: d799345e946adbb49bed4cc1ddb63c74, type: 2}
+  - {fileID: 11400000, guid: c4a42b67604855e4e9ee3987a19bf64f, type: 2}
+  - {fileID: 11400000, guid: b41bf58192545a743b4a21279f342365, type: 2}
+  - {fileID: 11400000, guid: 97ce8ca1e5a3c694786c5824e1897d2a, type: 2}
+  - {fileID: 11400000, guid: 32e069f9be690164192a8cefcd229c4c, type: 2}
+  - {fileID: 11400000, guid: 1eaa43f44e019b341b8bda60d185a807, type: 2}
+  compatibleLeft:
+  - {fileID: 11400000, guid: 1eaa43f44e019b341b8bda60d185a807, type: 2}
+  compatibleRight:
+  - {fileID: 11400000, guid: 3d1a5fddc6ec09b498ac4609d5a5837f, type: 2}
+  - {fileID: 11400000, guid: d799345e946adbb49bed4cc1ddb63c74, type: 2}
+  - {fileID: 11400000, guid: c4a42b67604855e4e9ee3987a19bf64f, type: 2}
+  - {fileID: 11400000, guid: b41bf58192545a743b4a21279f342365, type: 2}
+  - {fileID: 11400000, guid: 97ce8ca1e5a3c694786c5824e1897d2a, type: 2}
+  - {fileID: 11400000, guid: 32e069f9be690164192a8cefcd229c4c, type: 2}
+  - {fileID: 11400000, guid: 99789a81fe9904e4f910a476e4430585, type: 2}
